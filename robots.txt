@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doia.be/sitemap.xml
