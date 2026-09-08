@@ -31,7 +31,6 @@
   "@type": "ProfessionalService",
   "@id": "https://doia.be/#studio",
   "name": "Studio DOIA",
-  "alternateName": "Studio DOIA",
   "description": "Interieurarchitectuurstudio in België voor residentiële en commerciële ruimtes, waaronder wonen, retail, office en hospitality. Rustige, mensgerichte interieurs met eerlijke, natuurlijke materialen.",
   "url": "https://doia.be/",
   "image": "https://doia.be/images/baigal-02.jpg",
@@ -40,6 +39,76 @@
   "email": "hello@doia.be",
   "vatID": "BE0735512495",
   "priceRange": "€€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Heidijk+17%2C+2860+Sint-Katelijne-Waver%2C+Belgi%C3%AB",
+  "availableLanguage": [
+    { "@type": "Language", "name": "Dutch", "alternateName": "nl" },
+    { "@type": "Language", "name": "English", "alternateName": "en" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Diensten",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "position": 1,
+        "url": "https://doia.be/contact",
+        "description": "Prijs op maat van uw project. Vraag een offerte aan via de contactpagina.",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ruimtelijk advies",
+          "description": "Huisbezoek van twee tot drie uur met opmeting en schetsen ter plaatse. Binnen een week ontvangt u een kort verslag met richtingen voor uw ruimte.",
+          "serviceType": "Interieurarchitectuur",
+          "provider": { "@id": "https://doia.be/#studio" },
+          "areaServed": { "@type": "Country", "name": "België" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "position": 2,
+        "url": "https://doia.be/contact",
+        "description": "Prijs op maat van uw project. Vraag een offerte aan via de contactpagina.",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ontwerp",
+          "description": "Volledig concept: plannen van bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, materiaal- en kleurplan, verlichtingsplan en een meetstaat.",
+          "serviceType": "Interieurarchitectuur",
+          "provider": { "@id": "https://doia.be/#studio" },
+          "areaServed": { "@type": "Country", "name": "België" }
+        }
+      },
+      {
+        "@type": "Offer",
+        "position": 3,
+        "url": "https://doia.be/contact",
+        "description": "Prijs op maat van uw project. Vraag een offerte aan via de contactpagina.",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ontwerp met begeleiding",
+          "description": "Alles uit Ontwerp, aangevuld met aanbesteding en werfopvolging tot en met de oplevering.",
+          "serviceType": "Interieurarchitectuur",
+          "provider": { "@id": "https://doia.be/#studio" },
+          "areaServed": { "@type": "Country", "name": "België" }
+        }
+      }
+    ]
+  },
+  "potentialAction": {
+    "@type": "AskAction",
+    "name": "Offerte aanvragen",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://doia.be/contact",
+      "actionPlatform": "https://schema.org/DesktopWebPlatform"
+    }
+  },
   "founder": {
     "@type": "Person",
     "name": "Dulguun Otgonjav",
