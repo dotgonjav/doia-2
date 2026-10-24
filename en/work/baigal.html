@@ -116,10 +116,10 @@
 
   /* gallery */
   .gallery { display: grid; gap: clamp(14px,2vw,22px); padding-block: clamp(40px,6vw,80px); }
-  .g-full { aspect-ratio: 16 / 9; }
-  .g-pair { display: grid; gap: clamp(14px,2vw,22px); }
-  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } }
-  .g-pair .frame { aspect-ratio: 4 / 5; }
+  .g-full { aspect-ratio: 3 / 2; }
+  .g-pair, .g-trio { display: grid; gap: clamp(14px,2vw,22px); }
+  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } .g-trio { grid-template-columns: repeat(3, 1fr); } }
+  .g-pair .frame, .g-trio .frame { aspect-ratio: 2 / 3; }
   .cap { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: 9px; }
 
   /* materials note */
@@ -171,7 +171,7 @@
 
 <header class="proj-hero" data-screen-label="Baigal, hero">
   <div class="frame">
-    <img src="../../images/baigal-02.jpg" alt="Baigal, sunlight through a narrow window" loading="eager" fetchpriority="high" />
+    <img src="../../images/baigal-02.jpg" alt="Baigal, bedroom in blackened wood overlooking the landscape" loading="eager" fetchpriority="high" />
   </div>
   <div class="proj-hero__scrim"></div>
   <div class="proj-hero__cap">
@@ -192,27 +192,33 @@
     <div class="proj-intro">
       <div class="reveal">
         <p class="eyebrow" style="margin-bottom: 18px;">About the project</p>
-        <p>On the left bank, where city and nature just touch, a couple wanted a place to truly withdraw without leaving the city. <span class="pull">Baigal is built from discarded shipping containers, a second life for a structure that would otherwise be demolished.</span></p>
+        <p>On the left bank, where city and nature just touch, a couple wanted a place to truly withdraw without leaving the city. <span class="pull">Baigal is built from discarded shipping containers and, inside, reduced to three materials: blackened wood, red travertine and lime.</span></p>
       </div>
       <div class="reveal d1">
-        <p>The brief was intimacy: not a large, representative space, but a stay that closes around two people. Vertical blackened wood, from floor to ceiling, does exactly that, it absorbs the light and draws the eye inward.</p>
-        <p style="margin-top: 1.1em;">A single window breaks that restraint open and brings the landscape inside. Sustainability here is not a label, but the choice to reuse what was already standing.</p>
+        <p>Vertical blackened wood clads walls, cabinets and doors from floor to ceiling. It absorbs the light and closes the stay around two people. Ceiling and floor remain light and matte, in lime plaster and a grey poured floor, so daylight reaches deep inside.</p>
+        <p style="margin-top: 1.1em;">The red travertine runs through the space as one continuous band: it folds into windowsill, desk and basin, and returns in the bathroom. Washing, writing and sleeping each find a place at the window, with the landscape as backdrop. A cowhide, a cane seat and stone bowls complete the whole.</p>
       </div>
     </div>
   </section>
 
   <section class="shell gallery">
     <div class="reveal">
-      <div class="frame g-full"><img src="../../images/baigal-01.jpg" alt="Basin and bench in blackened wood" loading="lazy" /></div>
+      <div class="frame g-full"><img src="../../images/baigal-01.jpg" alt="Desk and basin in red travertine beneath a large window" loading="lazy" /></div>
     </div>
-
+    <div class="g-trio">
+      <div class="reveal"><div class="frame"><img src="../../images/baigal-05.jpg" alt="Bed beneath the window, walls in blackened wood" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../../images/baigal-03.jpg" alt="Corner bench in red travertine with a cane chair" loading="lazy" /></div></div>
+      <div class="reveal d2"><div class="frame"><img src="../../images/baigal-04.jpg" alt="Red travertine desk in front of the window" loading="lazy" /></div></div>
+    </div>
+    <div class="reveal">
+      <div class="frame g-full"><img src="../../images/baigal-06.jpg" alt="Corridor with travertine windowsill, view to the basin" loading="lazy" /></div>
+    </div>
     <div class="g-pair">
-      <div class="reveal">
-        <div class="frame"><img src="../../images/baigal-03.jpg" alt="Basin in red travertine, narrow window" loading="lazy" /></div>
-      </div>
-      <div class="reveal d1">
-        <div class="frame"><img src="../../images/baigal-04.jpg" alt="Windowsill and daylight" loading="lazy" /></div>
-      </div>
+      <div class="reveal"><div class="frame"><img src="../../images/baigal-07.jpg" alt="View along the windowsill to the basin" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../../images/baigal-08.jpg" alt="Red travertine basin between blackened wood" loading="lazy" /></div></div>
+    </div>
+    <div class="reveal">
+      <div class="frame g-full"><img src="../../images/baigal-09.jpg" alt="Red travertine basin beside the shower" loading="lazy" /></div>
     </div>
   </section>
 

@@ -116,10 +116,10 @@
 
   /* gallery */
   .gallery { display: grid; gap: clamp(14px,2vw,22px); padding-block: clamp(40px,6vw,80px); }
-  .g-full { aspect-ratio: 16 / 9; }
-  .g-pair { display: grid; gap: clamp(14px,2vw,22px); }
-  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } }
-  .g-pair .frame { aspect-ratio: 4 / 5; }
+  .g-full { aspect-ratio: 3 / 2; }
+  .g-pair, .g-trio { display: grid; gap: clamp(14px,2vw,22px); }
+  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } .g-trio { grid-template-columns: repeat(3, 1fr); } }
+  .g-pair .frame, .g-trio .frame { aspect-ratio: 2 / 3; }
   .cap { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: 9px; }
 
   /* materials note */
@@ -171,7 +171,7 @@
 
 <header class="proj-hero" data-screen-label="Baigal, hero">
   <div class="frame">
-    <img src="../images/baigal-02.jpg" alt="Baigal, zonneschijn door smal raam" loading="eager" fetchpriority="high" />
+    <img src="../images/baigal-02.jpg" alt="Baigal, slaapkamer in gezwart hout met zicht op het landschap" loading="eager" fetchpriority="high" />
   </div>
   <div class="proj-hero__scrim"></div>
   <div class="proj-hero__cap">
@@ -192,27 +192,33 @@
     <div class="proj-intro">
       <div class="reveal">
         <p class="eyebrow" style="margin-bottom: 18px;">Over het project</p>
-        <p>Op de linkeroever, waar stad en natuur elkaar net raken, wilde een koppel een plek om zich echt terug te trekken zonder de stad te verlaten. <span class="pull">Baigal is opgebouwd uit afgedankte scheepscontainers, een tweede leven voor een structuur die anders gesloopt zou worden.</span></p>
+        <p>Op de linkeroever, waar stad en natuur elkaar net raken, wilde een koppel een plek om zich echt terug te trekken zonder de stad te verlaten. <span class="pull">Baigal is opgebouwd uit afgedankte scheepscontainers en binnenin teruggebracht tot drie materialen: gezwart hout, rood travertijn en kalk.</span></p>
       </div>
       <div class="reveal d1">
-        <p>De vraag was intimiteit: geen grote, representatieve ruimte, maar een verblijf dat zich sluit rond twee mensen. Verticaal gezwart hout, van vloer tot plafond, doet precies dat, het neemt het licht op en trekt de blik naar binnen.</p>
-        <p style="margin-top: 1.1em;">Eén raam breekt die ingetogenheid open en haalt het landschap naar binnen. Duurzaamheid zit hier niet in een label, maar in de keuze om te hergebruiken wat er al stond.</p>
+        <p>Verticaal gezwart hout bekleedt wanden, kasten en deuren van vloer tot plafond. Het neemt het licht op en sluit het verblijf rond twee mensen. Plafond en vloer blijven licht en mat, in kalkpleister en een grijze gietvloer, zodat het daglicht ver naar binnen reikt.</p>
+        <p style="margin-top: 1.1em;">Het rode travertijn loopt als één doorlopende band door de ruimte: het plooit zich tot vensterbank, bureau en lavabo, en keert terug in de badkamer. Wassen, schrijven en slapen krijgen elk een plek aan het raam, met het landschap als achtergrond. Een koeienhuid, rieten zitting en stenen schalen maken het geheel af.</p>
       </div>
     </div>
   </section>
 
   <section class="shell gallery">
     <div class="reveal">
-      <div class="frame g-full"><img src="../images/baigal-01.jpg" alt="Lavabo en zitbank in gezwart hout" loading="lazy" /></div>
+      <div class="frame g-full"><img src="../images/baigal-01.jpg" alt="Bureau en lavabo in rood travertijn onder een groot raam" loading="lazy" /></div>
     </div>
-
+    <div class="g-trio">
+      <div class="reveal"><div class="frame"><img src="../images/baigal-05.jpg" alt="Bed onder het raam, wanden in gezwart hout" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../images/baigal-03.jpg" alt="Hoekbank in rood travertijn met rieten stoel" loading="lazy" /></div></div>
+      <div class="reveal d2"><div class="frame"><img src="../images/baigal-04.jpg" alt="Bureau in rood travertijn voor het raam" loading="lazy" /></div></div>
+    </div>
+    <div class="reveal">
+      <div class="frame g-full"><img src="../images/baigal-06.jpg" alt="Gang met vensterbank in travertijn, doorkijk naar de lavabo" loading="lazy" /></div>
+    </div>
     <div class="g-pair">
-      <div class="reveal">
-        <div class="frame"><img src="../images/baigal-03.jpg" alt="Lavabo in rood travertijn, smal raam" loading="lazy" /></div>
-      </div>
-      <div class="reveal d1">
-        <div class="frame"><img src="../images/baigal-04.jpg" alt="Vensterbank en daglicht" loading="lazy" /></div>
-      </div>
+      <div class="reveal"><div class="frame"><img src="../images/baigal-07.jpg" alt="Doorkijk langs de vensterbank naar de lavabo" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../images/baigal-08.jpg" alt="Lavabo in rood travertijn tussen gezwart hout" loading="lazy" /></div></div>
+    </div>
+    <div class="reveal">
+      <div class="frame g-full"><img src="../images/baigal-09.jpg" alt="Lavabo in rood travertijn naast de douche" loading="lazy" /></div>
     </div>
   </section>
 
