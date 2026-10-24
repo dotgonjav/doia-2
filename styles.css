@@ -22,7 +22,8 @@
   --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
 
   /* rhythm */
-  --gut: clamp(20px, 4.5vw, 64px);   /* page side margin */
+  --max: 1600px;                      /* max content width on wide screens */
+  --gut: max(clamp(20px, 4.5vw, 64px), calc((100vw - var(--max)) / 2));   /* page side margin, grows on widescreen to center content */
   --rule: 1px;
 
   /* motion */

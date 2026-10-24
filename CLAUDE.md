@@ -84,7 +84,7 @@ Fonts geladen via Google Fonts in `styles.css`:
 
 ## 5. Lay-out & grid
 
-**Paginamarge**: `--gut: clamp(20px, 4.5vw, 64px)` - altijd via `.shell` toegepast.
+**Paginamarge**: `--gut: max(clamp(20px, 4.5vw, 64px), calc((100vw - var(--max)) / 2))` - altijd via `.shell` toegepast. `--max: 1600px` = maximale inhoudsbreedte; op widescreens groeit de marge zodat inhoud, nav en footer gecentreerd blijven. Hero-beelden blijven full-bleed.
 
 **Rasterlogica**:
 - Desktop breakpoint voor 2-koloms: `min-width: 860px` (tekst + beeld naast elkaar)
