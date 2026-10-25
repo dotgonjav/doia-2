@@ -2,7 +2,8 @@
 
 Zet deze bestanden in de root van de repo (zelfde mapstructuur), overschrijf bestaande.
 
-- `index.html`, `en/index.html` — diensten als kaarten, klikbaar naar contact met voorgeselecteerde dienst; nieuwe tekst Ruimtelijk advies; meetstaat verplaatst naar Ontwerp met begeleiding.
+- `index.html`, `en/index.html` — diensten als kaarten, klikbaar naar contact met voorgeselecteerde dienst; nieuwe tekst Ruimtelijk advies; meetstaat verplaatst naar Ontwerp met begeleiding; veelgestelde vragen (+ FAQPage-schema) onderaan.
+- `studio.html`, `en/studio.html` — veelgestelde vragen en FAQPage-schema verwijderd; meta-description aangepast.
 - `contact.html`, `en/contact.html` — stapsgewijze vragenlijst, gecentreerd; contactinfo eronder; Google Maps en routebeschrijving verwijderd.
 - `contact-wizard.js` — NIEUW: logica van de vragenlijst (NL + EN).
 - `postcodes-be.js` — NIEUW: Belgische postcodes → gemeente (bron: bpost-lijst via jief/zipcode-belgium).
