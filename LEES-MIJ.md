@@ -24,6 +24,10 @@ Behoud de mappenstructuur: en/index.html hoort in en/, enzovoort.
 - werk/ger.html, en/work/ger.html   nieuwe galerij (11 beelden, 3:2 / 2:3), nieuw concept + materiaaltekst, og:image = ger-01
 - werk.html, en/work.html, index.html, en/index.html   Ger-kaart en hero-slides naar nieuwe beelden
 
+## Social preview (og:image)
+- werk/baigal.html, en/work/baigal.html   og:image = baigal-02
+- werk/shar.html, en/work/shar.html   og:image = shar-01
+
 ## Widescreen
 - styles.css   maximale inhoudsbreedte 1600px, gecentreerd op brede schermen
 
