@@ -78,7 +78,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Design",
-          "description": "A complete concept: plans of the existing and new situation, sections, 3D visualisations, a material and colour plan, a lighting plan and a bill of quantities.",
+          "description": "A complete concept: plans of the existing and new situation, sections, 3D visualisations, a material and colour plan and a lighting plan.",
           "serviceType": "Interior architecture",
           "provider": { "@id": "https://doia.be/#studio" },
           "areaServed": { "@type": "Country", "name": "Belgium" }
@@ -92,7 +92,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Design with guidance",
-          "description": "Everything from Design, plus the tender and site supervision through to completion.",
+          "description": "Everything from Design, plus a bill of quantities, the tender and site supervision through to completion.",
           "serviceType": "Interior architecture",
           "provider": { "@id": "https://doia.be/#studio" },
           "areaServed": { "@type": "Country", "name": "Belgium" }
@@ -232,15 +232,19 @@
 
   /* services */
   .services { padding-block: clamp(80px, 12vw, 160px); border-top: 1px solid var(--line); margin-top: clamp(70px,10vw,140px); }
-  .services__list { border-top: 1px solid var(--line); }
+  .services__list { display: grid; grid-template-columns: 1fr; gap: clamp(18px, 2.5vw, 28px); }
+  @media (min-width: 820px) { .services__list { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto 1fr auto; } .services__list .svc { grid-row: span 3; grid-template-rows: subgrid; } }
   .svc {
-    display: grid; grid-template-columns: 1fr; gap: 12px 40px;
-    padding: clamp(26px, 3.5vw, 46px) 0; border-bottom: 1px solid var(--line);
-    transition: padding-left 0.5s var(--ease);
+    display: grid; grid-template-rows: auto 1fr auto; align-content: start; color: inherit; text-decoration: none; gap: clamp(22px, 3vw, 36px);
+    padding: clamp(28px, 3.2vw, 44px); border: 1px solid var(--line); background: var(--paper);
+    transition: border-color 0.5s var(--ease), background 0.5s var(--ease);
   }
-  @media (min-width: 820px) { .svc { grid-template-columns: 1fr 1.7fr 0.5fr; align-items: start; } }
-  .svc__head { display: flex; align-items: baseline; gap: clamp(22px,3vw,44px); }
-  .svc:hover { padding-left: clamp(0px, 1.5vw, 22px); }
+  .svc__head { display: grid; gap: clamp(18px, 2.5vw, 28px); padding-bottom: clamp(18px, 2.5vw, 28px); border-bottom: 1px solid var(--line); }
+  .svc:hover { border-color: var(--ink-3); background: var(--paper-2); }
+  .svc:hover .svc__no { color: var(--accent); }
+  .svc__no { transition: color 0.5s var(--ease); }
+  .svc__cta { display: inline-flex; gap: 10px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--ink); transition: gap 0.4s var(--ease), color 0.4s var(--ease); }
+  .svc:hover .svc__cta { gap: 16px; color: var(--accent); }
   .svc__no { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase; }
   .svc__name { font-size: clamp(1.3rem, 2.2vw, 1.9rem); font-weight: 300; letter-spacing: -0.01em; }
   .svc__desc { color: var(--ink-2); max-width: 46ch; }
@@ -330,18 +334,15 @@
       <h2 class="eyebrow">Services</h2>
     </div>
     <div class="services__list">
-      <div class="svc reveal">
+      <a class="svc reveal" href="/en/contact?dienst=advies">
         <div class="svc__head"><span class="svc__no">01</span><span class="svc__name">Spatial advice</span></div>
-        <p class="svc__desc">During a home visit of two to three hours I measure your space and see how your household lives in it, sketching on site. Within a week you receive a short report with two scenarios, hand sketches, an indication of the construction cost and advice on the tradespeople you will need. If you proceed to Design, this amount is fully deducted.</p>
-      </div>
-      <div class="svc reveal">
+        <p class="svc__desc">During a home visit of one to three hours, you and I get to know each other. I listen to your needs and wishes and advise on site on what could change: in space, colour and style. If it feels right, you continue with Design or Design with guidance.</p><span class="svc__cta">Enquire →</span></a>
+      <a class="svc reveal d1" href="/en/contact?dienst=ontwerp">
         <div class="svc__head"><span class="svc__no">02</span><span class="svc__name">Design</span></div>
-        <p class="svc__desc">Based on the survey I develop a complete concept: plans of the existing and new situation, sections, 3D visualisations, a material and colour plan, a lighting plan and a bill of quantities. Two rounds of revision are included.</p>
-      </div>
-      <div class="svc reveal">
+        <p class="svc__desc">Based on the survey I develop a complete concept: plans of the existing and new situation, sections, 3D visualisations, a material and colour plan and a lighting plan. Two rounds of revision are included.</p><span class="svc__cta">Enquire →</span></a>
+      <a class="svc reveal d2" href="/en/contact?dienst=begeleiding">
         <div class="svc__head"><span class="svc__no">03</span><span class="svc__name">Design with guidance</span></div>
-        <p class="svc__desc">Everything from Design, plus the tender: quotes are compared and the site is followed up through to completion, always in close cooperation with an experienced contractor or site manager.</p>
-      </div>
+        <p class="svc__desc">Everything from Design, plus a bill of quantities and the tender: quotes are compared and the site is followed up through to completion, always in close cooperation with an experienced contractor or site manager.</p><span class="svc__cta">Enquire →</span></a>
     </div>
   </section>
 

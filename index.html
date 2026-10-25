@@ -78,7 +78,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Ontwerp",
-          "description": "Volledig concept: plannen van bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, materiaal- en kleurplan, verlichtingsplan en een meetstaat.",
+          "description": "Volledig concept: plannen van bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, materiaal- en kleurplan en verlichtingsplan.",
           "serviceType": "Interieurarchitectuur",
           "provider": { "@id": "https://doia.be/#studio" },
           "areaServed": { "@type": "Country", "name": "België" }
@@ -92,7 +92,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Ontwerp met begeleiding",
-          "description": "Alles uit Ontwerp, aangevuld met aanbesteding en werfopvolging tot en met de oplevering.",
+          "description": "Alles uit Ontwerp, aangevuld met een meetstaat, aanbesteding en werfopvolging tot en met de oplevering.",
           "serviceType": "Interieurarchitectuur",
           "provider": { "@id": "https://doia.be/#studio" },
           "areaServed": { "@type": "Country", "name": "België" }
@@ -232,15 +232,19 @@
 
   /* services */
   .services { padding-block: clamp(80px, 12vw, 160px); border-top: 1px solid var(--line); margin-top: clamp(70px,10vw,140px); }
-  .services__list { border-top: 1px solid var(--line); }
+  .services__list { display: grid; grid-template-columns: 1fr; gap: clamp(18px, 2.5vw, 28px); }
+  @media (min-width: 820px) { .services__list { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto 1fr auto; } .services__list .svc { grid-row: span 3; grid-template-rows: subgrid; } }
   .svc {
-    display: grid; grid-template-columns: 1fr; gap: 12px 40px;
-    padding: clamp(26px, 3.5vw, 46px) 0; border-bottom: 1px solid var(--line);
-    transition: padding-left 0.5s var(--ease);
+    display: grid; grid-template-rows: auto 1fr auto; align-content: start; color: inherit; text-decoration: none; gap: clamp(22px, 3vw, 36px);
+    padding: clamp(28px, 3.2vw, 44px); border: 1px solid var(--line); background: var(--paper);
+    transition: border-color 0.5s var(--ease), background 0.5s var(--ease);
   }
-  @media (min-width: 820px) { .svc { grid-template-columns: 1fr 1.7fr 0.5fr; align-items: start; } }
-  .svc__head { display: flex; align-items: baseline; gap: clamp(22px,3vw,44px); }
-  .svc:hover { padding-left: clamp(0px, 1.5vw, 22px); }
+  .svc__head { display: grid; gap: clamp(18px, 2.5vw, 28px); padding-bottom: clamp(18px, 2.5vw, 28px); border-bottom: 1px solid var(--line); }
+  .svc:hover { border-color: var(--ink-3); background: var(--paper-2); }
+  .svc:hover .svc__no { color: var(--accent); }
+  .svc__no { transition: color 0.5s var(--ease); }
+  .svc__cta { display: inline-flex; gap: 10px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--ink); transition: gap 0.4s var(--ease), color 0.4s var(--ease); }
+  .svc:hover .svc__cta { gap: 16px; color: var(--accent); }
   .svc__no { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase; }
   .svc__name { font-size: clamp(1.3rem, 2.2vw, 1.9rem); font-weight: 300; letter-spacing: -0.01em; }
   .svc__desc { color: var(--ink-2); max-width: 46ch; }
@@ -330,18 +334,15 @@
       <h2 class="eyebrow">Diensten</h2>
     </div>
     <div class="services__list">
-      <div class="svc reveal">
+      <a class="svc reveal" href="/contact?dienst=advies">
         <div class="svc__head"><span class="svc__no">01</span><span class="svc__name">Ruimtelijk advies</span></div>
-        <p class="svc__desc">Tijdens een huisbezoek van twee tot drie uur meet ik uw ruimte op en bekijk ik hoe uw gezin er leeft, met schetsen ter plaatse. Binnen een week ontvangt u een kort verslag met twee scenario's, handschetsen, een indicatie van de bouwkost en advies over de vakmensen die u nodig heeft. Bij doorgang naar Ontwerp wordt dit bedrag volledig verrekend.</p>
-      </div>
-      <div class="svc reveal">
+        <p class="svc__desc">Tijdens een huisbezoek van één tot drie uur leren u en ik elkaar kennen. Ik luister naar uw noden en wensen en geef ter plaatse advies over wat er kan veranderen: ruimtelijk, in kleur en in stijl. Voelt het goed, dan gaat u verder met Ontwerp of Ontwerp met begeleiding.</p><span class="svc__cta">Aanvragen →</span></a>
+      <a class="svc reveal d1" href="/contact?dienst=ontwerp">
         <div class="svc__head"><span class="svc__no">02</span><span class="svc__name">Ontwerp</span></div>
-        <p class="svc__desc">Op basis van de opmeting werk ik een volledig concept uit: plannen van de bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, een materiaal- en kleurplan, een verlichtingsplan en een meetstaat. Twee revisierondes zijn inbegrepen.</p>
-      </div>
-      <div class="svc reveal">
+        <p class="svc__desc">Op basis van de opmeting werk ik een volledig concept uit: plannen van de bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, een materiaal- en kleurplan en een verlichtingsplan. Twee revisierondes zijn inbegrepen.</p><span class="svc__cta">Aanvragen →</span></a>
+      <a class="svc reveal d2" href="/contact?dienst=begeleiding">
         <div class="svc__head"><span class="svc__no">03</span><span class="svc__name">Ontwerp met begeleiding</span></div>
-        <p class="svc__desc">Alles uit Ontwerp, aangevuld met de aanbesteding: offertes worden vergeleken en de werf wordt opgevolgd tot en met de oplevering, steeds in nauwe samenwerking met een ervaren aannemer of werfleider.</p>
-      </div>
+        <p class="svc__desc">Alles uit Ontwerp, aangevuld met een meetstaat en de aanbesteding: offertes worden vergeleken en de werf wordt opgevolgd tot en met de oplevering, steeds in nauwe samenwerking met een ervaren aannemer of werfleider.</p><span class="svc__cta">Aanvragen →</span></a>
     </div>
   </section>
 

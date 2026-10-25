@@ -119,7 +119,9 @@
   .page-head { padding-top: clamp(120px, 18vh, 220px); padding-bottom: clamp(30px, 5vw, 56px); }
 
   .contact-grid { display: grid; gap: clamp(44px, 6vw, 90px); padding-bottom: clamp(40px,6vw,80px); }
-  @media (min-width: 900px) { .contact-grid { grid-template-columns: 0.9fr 1.1fr; align-items: start; } }
+  .contact-form { width: 100%; max-width: 760px; justify-self: center; }
+  .contact-info { display: grid; gap: 0 clamp(28px, 5vw, 60px); border-top: 1px solid var(--line); padding-top: clamp(28px, 4vw, 44px); }
+  @media (min-width: 720px) { .contact-info { grid-template-columns: repeat(4, minmax(0, 1fr)); } .contact-info .info__block { border-top: 0; padding-top: 0; } }
 
   .info__block { border-top: 1px solid var(--line); padding: 22px 0; }
   .info__block:first-child { border-top: 0; padding-top: 0; }
@@ -170,33 +172,48 @@
   .form__sent .eyebrow { color: var(--ink); margin-bottom: 14px; }
   .form__sent p { color: var(--ink-2); max-width: 48ch; }
 
-  .map-strip { margin-top: clamp(50px,8vw,110px); }
-  .map { position: relative; display: block; }
-  .map .frame { aspect-ratio: 21 / 7; background: var(--paper-2); }
-  @media (max-width: 560px) { .map .frame { aspect-ratio: 4 / 3; } }
-  .map__embed { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(0.35) contrast(0.96); }
-  .map__cap {
-    position: absolute; z-index: 3;
-    left: clamp(16px,3vw,32px); right: clamp(16px,3vw,32px); bottom: clamp(16px,3vw,30px);
-    display: flex; justify-content: space-between; align-items: flex-end; gap: 14px; flex-wrap: wrap;
-    pointer-events: none;
-  }
-  .map__addr {
-    display: flex; align-items: center; gap: 11px; pointer-events: auto;
-    background: rgba(22,20,15,.84); color: #fff;
-    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-    padding: 11px 15px;
-    font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase;
-  }
-  .map__pin { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(201,100,66,.28); flex: none; }
-  .map__cta {
-    display: inline-flex; align-items: center; gap: 11px; pointer-events: auto;
-    background: var(--ink); color: var(--paper);
-    font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem;
-    border: 1px solid var(--ink); padding: 13px 22px; text-decoration: none;
-    transition: background 0.4s var(--ease), border-color 0.4s var(--ease), color 0.4s var(--ease), gap 0.4s var(--ease);
-  }
-  .map__cta:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 17px; }
+  /* wizard */
+  .wiz [hidden] { display: none !important; }
+  .tel { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: end; }
+  .tel select { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.04em; padding-right: 4px; cursor: pointer; }
+  .wiz { display: grid; gap: clamp(28px, 4vw, 44px); }
+  .wiz__top { display: grid; gap: 12px; }
+  .wiz__count { color: var(--ink-3); }
+  .wiz__bar { height: 1px; background: var(--line); overflow: hidden; }
+  .wiz__bar span { display: block; height: 100%; width: 0; background: var(--ink); transition: width 0.6s var(--ease); }
+  .wiz__stage { display: grid; gap: clamp(18px, 2.5vw, 28px); animation: wizIn 0.5s var(--ease); }
+  @keyframes wizIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .wiz__q { font-weight: 300; letter-spacing: -0.015em; line-height: 1.15; font-size: clamp(1.5rem, 2.6vw, 2.2rem); max-width: 22ch; text-wrap: balance; }
+  .wiz__hint { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.62rem; color: var(--ink-3); }
+  .wiz__opts { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+  .opt { display: flex; gap: 14px; align-items: flex-start; text-align: left; background: transparent; border: 1px solid var(--line); padding: 18px; font: inherit; color: var(--ink); cursor: pointer; border-radius: 0; transition: border-color 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease); }
+  .opt:hover { border-color: var(--ink-3); background: var(--paper-2); }
+  .opt:focus-visible { outline: 1px solid var(--ink); outline-offset: 2px; }
+  .opt__box { width: 10px; height: 10px; border: 1px solid var(--line-2); border-radius: 50%; flex: none; margin-top: 0.42em; transition: background 0.35s var(--ease), border-color 0.35s var(--ease); }
+  .opt__box--multi { border-radius: 0; }
+  .opt[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+  .opt[aria-pressed="true"] .opt__box { background: var(--accent); border-color: var(--accent); }
+  .opt__txt { display: grid; gap: 4px; }
+  .opt__v { font-weight: 300; font-size: 1.05rem; line-height: 1.3; }
+  .opt__s { font-size: 0.84rem; color: var(--ink-2); line-height: 1.4; }
+  .opt[aria-pressed="true"] .opt__s { color: var(--line); }
+  .wiz__stage .field textarea { min-height: 140px; }
+  .wiz__pc { display: grid; gap: 12px; max-width: 340px; }
+  .wiz__pc-out { color: var(--ink-2); min-height: 1.5em; }
+  .wiz__pc-opts { grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 8px; }
+  .opt--sm { padding: 12px 14px; }
+  .opt--sm .opt__v { font-size: 0.95rem; }
+  .wiz__pc { max-width: 560px; }
+  .wiz__err { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; color: #9a3b2e; text-transform: uppercase; }
+  .wiz__nav { display: flex; align-items: center; gap: clamp(18px, 2.5vw, 28px); border-top: 1px solid var(--line); padding-top: clamp(20px, 3vw, 28px); }
+  .wiz__back, .wiz__skip { background: none; border: 0; padding: 6px 0; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.66rem; color: var(--ink-3); cursor: pointer; transition: color 0.35s var(--ease); }
+  .wiz__back:hover, .wiz__skip:hover { color: var(--accent); }
+  .wiz__nav .submit { margin: 0 0 0 auto; }
+  .sum { display: grid; margin-top: clamp(22px, 3vw, 32px); border-top: 1px solid var(--line); }
+  .sum div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .sum dt { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.62rem; color: var(--ink-3); padding-top: 0.35em; }
+  .sum dd { color: var(--ink); font-weight: 300; }
+
   .form__error { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: #9a3b2e; text-transform: uppercase; margin-top: 4px; }
 </style>
 </head>
@@ -218,8 +235,26 @@
   </header>
 
   <section class="shell contact-grid">
+    <!-- form -->
+    <div class="contact-form reveal">
+      <form class="wiz" id="wiz" novalidate>
+        <input type="hidden" name="access_key" value="abdd04eb-fa04-48cb-b314-44b6ef3f275d" />
+        <input type="hidden" name="subject" value="New project enquiry doia.be" />
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important" />
+        <div class="wiz__top"><span class="mono wiz__count" id="wiz-count">01 / 11</span><div class="wiz__bar"><span id="wiz-bar"></span></div></div>
+        <div class="wiz__stage" id="wiz-stage" aria-live="polite"></div>
+        <div class="wiz__nav"><button type="button" class="wiz__back" id="wiz-back">← Previous</button><button type="button" class="wiz__skip" id="wiz-skip">Skip</button><button type="button" class="submit" id="wiz-next">Next →</button></div>
+        <p class="form__error" id="form-error" hidden>Something went wrong while sending. Please try again or email hello@doia.be directly.</p>
+      </form>
+      <div class="form__sent" id="sent">
+        <p class="eyebrow">Enquiry received</p>
+        <p>Thank you, your enquiry has reached the studio. Dulguun reads every enquiry personally and will be in touch to schedule a first conversation.</p>
+        <dl class="sum" id="sum"></dl>
+      </div>
+      <noscript><p>Email directly to <a href="mailto:hello@doia.be">hello@doia.be</a>.</p></noscript>
+    </div>
     <!-- info -->
-    <div class="reveal">
+    <div class="contact-info reveal d1">
       <div class="info__block">
         <h4>Email</h4>
         <a href="mailto:hello@doia.be">hello@doia.be</a>
@@ -232,7 +267,6 @@
       <div class="info__block">
         <h4>Company details</h4>
         <p>Heidijk 17<br />B-2860 Sint-Katelijne-Waver<br />Belgium</p>
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Heidijk%2017%2C%202860%20Sint-Katelijne-Waver%2C%20Belgi%C3%AB" target="_blank" rel="noopener" style="margin-top: 12px; font-size: 0.92rem;">Get directions →</a>
         <p class="muted" style="margin-top: 12px;">VAT BE0735 512 495</p>
       </div>
       <div class="info__block">
@@ -242,75 +276,8 @@
       </div>
     </div>
 
-    <!-- form -->
-    <div class="reveal d1">
-      <form class="form" id="form" novalidate>
-        <input type="hidden" name="access_key" value="abdd04eb-fa04-48cb-b314-44b6ef3f275d" />
-        <input type="hidden" name="subject" value="New project enquiry doia.be" />
-        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important" />
-        <div class="form__row">
-          <div class="field" id="f-name">
-            <label for="name">Name <span class="req">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-            <span class="err">Please enter your name</span>
-          </div>
-          <div class="field" id="f-company">
-            <label for="company">Company name</label>
-            <input type="text" id="company" name="company" placeholder="Optional" />
-          </div>
-        </div>
-        <div class="form__row">
-          <div class="field" id="f-email">
-            <label for="email">Email <span class="req">*</span></label>
-            <input type="email" id="email" name="email" placeholder="you@email.com" required />
-            <span class="err">Please enter a valid email address</span>
-          </div>
-          <div class="field" id="f-phone">
-            <label for="phone">Phone <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="+32 …" required />
-            <span class="err">Please enter your phone number</span>
-          </div>
-        </div>
-        <div class="field" id="f-project">
-          <label for="project">Your project <span class="req">*</span></label>
-          <select id="project" name="project" required>
-            <option value="">Choose an option</option>
-            <option>Spatial advice</option>
-            <option>Design</option>
-            <option>Design with guidance</option>
-          </select>
-          <span class="err">Please choose a project type</span>
-        </div>
-        <div class="field" id="f-message">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your space, location and timing."></textarea>
-        </div>
-        <div class="consent" id="f-consent">
-          <input type="checkbox" id="consent" name="consent" />
-          <label for="consent">I agree to the <a href="/en/privacy">privacy policy</a> and consent to the processing and storage of my personal data by Studio DOIA, for administrative and communication purposes. <span class="req">*</span></label>
-        </div>
-        <button class="submit" type="submit">Send →</button>
-        <p class="form__error" id="form-error" hidden>Something went wrong while sending. Please try again or email hello@doia.be directly.</p>
-      </form>
-
-      <div class="form__sent" id="sent">
-        <p class="eyebrow">Message received</p>
-        <p>Thank you, your message has reached the studio. Dulguun reads every message personally and will be in touch to schedule a first conversation.</p>
-      </div>
-    </div>
   </section>
 
-  <div class="shell map-strip">
-    <div class="map reveal">
-      <div class="frame">
-        <iframe class="map__embed" title="Studio location, Heidijk 17, 2860 Sint-Katelijne-Waver" src="https://www.google.com/maps?q=Heidijk%2017%2C%202860%20Sint-Katelijne-Waver%2C%20Belgi%C3%AB&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="map__cap">
-        <span class="map__addr"><span class="map__pin" aria-hidden="true"></span>Heidijk 17 · 2860 Sint-Katelijne-Waver</span>
-        <a class="map__cta" href="https://www.google.com/maps/dir/?api=1&amp;destination=Heidijk%2017%2C%202860%20Sint-Katelijne-Waver%2C%20Belgi%C3%AB" target="_blank" rel="noopener">Get directions →</a>
-      </div>
-    </div>
-  </div>
 </main>
 
 <footer class="footer">
@@ -339,64 +306,6 @@
 </footer>
 <script src="../app.js"></script>
 <script src="../lang.js" defer></script>
-<script>
-  (function () {
-    var form = document.getElementById('form');
-    var sent = document.getElementById('sent');
-    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    function invalid(id, bad) { document.getElementById(id).classList.toggle('invalid', bad); }
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var ok = true;
-      if (!document.getElementById('name').value.trim()) { invalid('f-name', true); ok = false; } else invalid('f-name', false);
-      if (!emailRe.test(document.getElementById('email').value.trim())) { invalid('f-email', true); ok = false; } else invalid('f-email', false);
-      if (!document.getElementById('phone').value.trim()) { invalid('f-phone', true); ok = false; } else invalid('f-phone', false);
-      if (!document.getElementById('project').value) { invalid('f-project', true); ok = false; } else invalid('f-project', false);
-      if (!document.getElementById('consent').checked) { invalid('f-consent', true); ok = false; } else invalid('f-consent', false);
-      if (!ok) return;
-
-      var btn = form.querySelector('.submit');
-      var errEl = document.getElementById('form-error');
-      if (errEl) errEl.hidden = true;
-      var original = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data && data.success) {
-            form.style.display = 'none';
-            sent.classList.add('show');
-            if (window.doiaTrackLead) window.doiaTrackLead();
-            setTimeout(function () { window.location.href = '/en/thank-you'; }, 400);
-          } else {
-            throw new Error('submit failed');
-          }
-        })
-        .catch(function () {
-          btn.disabled = false;
-          btn.textContent = original;
-          if (errEl) errEl.hidden = false;
-        });
-    });
-
-    form.querySelectorAll('input, textarea, select').forEach(function (el) {
-      el.addEventListener('input', function () {
-        var f = el.closest('.field') || el.closest('.consent');
-        if (f) f.classList.remove('invalid');
-      });
-      el.addEventListener('change', function () {
-        var f = el.closest('.field') || el.closest('.consent');
-        if (f) f.classList.remove('invalid');
-      });
-    });
-  })();
-</script>
+<script src="../contact-wizard.js"></script>
 </body>
 </html>
