@@ -1,6 +1,6 @@
 # Upload naar repo "doia-2" (doia.be)
 
-Deze 10 bestanden vervangen de bestaande versies in de root van de repo.
+Deze bestanden vervangen de bestaande versies in de root van de repo.
 Behoud de mappenstructuur: en/index.html hoort in en/, enzovoort.
 
 ## Bestanden
@@ -14,6 +14,18 @@ Behoud de mappenstructuur: en/index.html hoort in en/, enzovoort.
 - en/studio.html        idem (EN)
 - sitemap.xml           alle lastmod-datums op 2026-09-08
 - CLAUDE.md             projectregels (niet zichtbaar op de site)
+
+## Project Baigal: nieuwe beelden
+- images/baigal-01 t/m 09.jpg   (01-04 overschrijven, 05-09 nieuw)
+- werk/baigal.html, en/work/baigal.html   nieuwe galerij (9 beelden, 3:2 / 2:3) + nieuwe projecttekst
+
+## Project Ger: nieuw ontwerp
+- images/ger-01 t/m 11.jpg   (01-06 overschrijven, 07-11 nieuw)
+- werk/ger.html, en/work/ger.html   nieuwe galerij (11 beelden, 3:2 / 2:3), nieuw concept + materiaaltekst, og:image = ger-01
+- werk.html, en/work.html, index.html, en/index.html   Ger-kaart en hero-slides naar nieuwe beelden
+
+## Widescreen
+- styles.css   maximale inhoudsbreedte 1600px, gecentreerd op brede schermen
 
 ## Stappen
     git add -A
