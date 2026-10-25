@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ger — residentieel interieurconcept | Studio DOIA</title>
-<meta name="description" content="Een keuken- en woonruimte in een Antwerpse rijwoning, opengebroken tot één breed interieur." />
+<meta name="description" content="Een open leefruimte in een Antwerpse woning: keuken, eettafel en zithoek rond één blok licht travertijn." />
 <link rel="canonical" href="https://doia.be/werk/ger" />
 <link rel="alternate" hreflang="nl" href="https://doia.be/werk/ger" />
 <link rel="alternate" hreflang="en" href="https://doia.be/en/work/ger" />
@@ -12,14 +12,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Studio DOIA" />
 <meta property="og:title" content="Ger — residentieel interieurconcept | Studio DOIA" />
-<meta property="og:description" content="Een keuken- en woonruimte in een Antwerpse rijwoning, opengebroken tot één breed interieur." />
+<meta property="og:description" content="Een open leefruimte in een Antwerpse woning: keuken, eettafel en zithoek rond één blok licht travertijn." />
 <meta property="og:url" content="https://doia.be/werk/ger" />
-<meta property="og:image" content="https://doia.be/og-image.jpg" />
+<meta property="og:image" content="https://doia.be/images/ger-01.jpg" />
 <meta property="og:locale" content="nl_BE" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ger — residentieel interieurconcept | Studio DOIA" />
-<meta name="twitter:description" content="Een keuken- en woonruimte in een Antwerpse rijwoning, opengebroken tot één breed interieur." />
-<meta name="twitter:image" content="https://doia.be/og-image.jpg" />
+<meta name="twitter:description" content="Een open leefruimte in een Antwerpse woning: keuken, eettafel en zithoek rond één blok licht travertijn." />
+<meta name="twitter:image" content="https://doia.be/images/ger-01.jpg" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -30,8 +30,8 @@
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Ger",
-  "description": "Keuken en woonkamer in een Antwerpse rijwoning, opengebroken tot één doorlopend interieur.",
-  "image": "https://doia.be/images/ger-04.jpg",
+  "description": "Open leefruimte in een Antwerpse woning, met keuken, eettafel en zithoek rond één blok licht travertijn.",
+  "image": "https://doia.be/images/ger-01.jpg",
   "creator": {
     "@id": "https://doia.be/#studio"
   },
@@ -116,15 +116,10 @@
 
   /* gallery */
   .gallery { display: grid; gap: clamp(14px,2vw,22px); padding-block: clamp(40px,6vw,80px); }
-  .g-full { aspect-ratio: 16 / 9; }
-  .g-tall { aspect-ratio: 3 / 4; }
-  .g-pair { display: grid; gap: clamp(14px,2vw,22px); }
-  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } }
-  .g-pair .frame { aspect-ratio: 4 / 5; }
-  .g-trio { display: grid; gap: clamp(14px,2vw,22px); }
-  @media (min-width: 680px) { .g-trio { grid-template-columns: 1.1fr 0.9fr; } }
-  .g-trio .frame:first-child { aspect-ratio: 4 / 5; }
-  .g-trio .frame:last-child { aspect-ratio: 4 / 5; }
+  .g-full { aspect-ratio: 3 / 2; }
+  .g-pair, .g-trio { display: grid; gap: clamp(14px,2vw,22px); }
+  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } .g-trio { grid-template-columns: repeat(3, 1fr); } }
+  .g-pair .frame, .g-trio .frame { aspect-ratio: 2 / 3; }
   .cap { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: 9px; }
 
   /* materials note */
@@ -176,7 +171,7 @@
 
 <header class="proj-hero" data-screen-label="Ger, hero">
   <div class="frame">
-    <img src="../images/ger-01.jpg" alt="Ger, leefruimte met circulair houten ribbeplafond en landschapsraam" loading="eager" fetchpriority="high" />
+    <img src="../images/ger-01.jpg" alt="Ger, eettafel en zithoek voor ramen van vloer tot plafond met zicht op het landschap" loading="eager" fetchpriority="high" />
   </div>
   <div class="proj-hero__scrim"></div>
   <div class="proj-hero__cap">
@@ -197,63 +192,46 @@
     <div class="proj-intro">
       <div class="reveal">
         <p class="eyebrow" style="margin-bottom: 18px;">Over het project</p>
-        <p>Deze rijwoning kwam als casco binnen, zonder vaste indeling. Het gezin dat er ging wonen, wilde geen dagelijkse standaardoplossing voor keuken, eetruimte en living, en dat vroeg om <span class="pull">opnieuw te denken over de verticale circulatie in het smalle volume.</span></p>
+        <p>Een gezin wilde koken, eten en samenzijn in één ruimte, zonder dat die ene ruimte onrustig werd. Het antwoord lag in de ger zelf: de nomadische tent met één kamer, waar alles rond een vast midden gebeurt. <span class="pull">Hier is dat midden een keuken uit één blok licht travertijn, met eettafel en zithoek eromheen langs de ramen.</span></p>
       </div>
       <div class="reveal d1">
-        <p>Een vide boven de keuken tilt het plafond open en maakt van die ene plek het hart van de woning, een bijna theatraal moment midden in het dagelijkse. Tegelijk werkt de vide als scheiding: keuken en living lezen als twee ruimtes, zonder dat daar een wand voor nodig is.</p>
-        <p style="margin-top: 1.1em;">Staalconstructie en een circulair houten ribbenplafond blijven zichtbaar als drager van het geheel, terracottategels lopen er als één doorlopende grond onderdoor.</p>
+        <p>De keuken staat als een vrijstaand volume in de ruimte. Hoge kasten in donker gerookt eiken vormen de achterwand, ervoor staat het eiland, volledig bekleed in travertijn, met een spoelbak uit dezelfde steen. Voorraad en techniek verdwijnen achter de kastenwand, zodat de leefruimte zelf leeg en rustig blijft.</p>
+        <p style="margin-top: 1.1em;">Langs de gevel lopen ramen van vloer tot plafond, achter linnen gordijnen die het licht verzachten. Eettafel en zithoek liggen elk op een eigen wollen tapijt, als twee plekken op één doorlopende eiken vloer. Elk moment van de dag krijgt zo een vaste plaats, zonder één tussenwand.</p>
       </div>
     </div>
   </section>
 
   <section class="shell gallery">
-
     <div class="reveal">
-      <div class="frame g-full">
-        <img src="../images/ger-05.jpg" alt="Overzicht leefzone en keuken" loading="lazy" />
-      </div>
+      <div class="frame g-full"><img src="../images/ger-02.jpg" alt="Zithoek met witte bank, massieve salontafel en linnen gordijnen" loading="lazy" /></div>
     </div>
-
     <div class="g-pair">
-      <div class="reveal">
-        <div class="frame">
-          <img src="../images/ger-03.jpg" alt="Trap en keuken, terracottavloer" loading="lazy" />
-        </div>
-      </div>
-      <div class="reveal d1">
-        <div class="frame">
-          <img src="../images/ger-02.jpg" alt="Leefzone, stoelen en salontafel in licht hout" loading="lazy" />
-        </div>
-      </div>
+      <div class="reveal"><div class="frame"><img src="../images/ger-10.jpg" alt="Blauw schilderij boven de bank, rieten bank aan het raam" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../images/ger-11.jpg" alt="Bijzettafel in donker hout met keramieken lamp naast de bank" loading="lazy" /></div></div>
     </div>
-
     <div class="reveal">
-      <div class="frame g-full">
-        <img src="../images/ger-04.jpg" alt="Kookeiland in mat brons, frontaal" loading="lazy" />
-      </div>
+      <div class="frame g-full"><img src="../images/ger-03.jpg" alt="Keuken met eiland in licht travertijn en hoge kasten in gerookt eiken" loading="lazy" /></div>
     </div>
-
+    <div class="g-trio">
+      <div class="reveal"><div class="frame"><img src="../images/ger-05.jpg" alt="Travertijnen eiland voor de kastenwand in gerookt eiken" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../images/ger-06.jpg" alt="Detail van de spoelbak in travertijn met gebogen kraan in geborsteld staal" loading="lazy" /></div></div>
+      <div class="reveal d2"><div class="frame"><img src="../images/ger-08.jpg" alt="Eiland in travertijn met rieten stoel en terracotta kruiken" loading="lazy" /></div></div>
+    </div>
+    <div class="reveal">
+      <div class="frame g-full"><img src="../images/ger-04.jpg" alt="Zithoek frontaal, blauw schilderij boven de bank" loading="lazy" /></div>
+    </div>
     <div class="g-pair">
-      <div class="reveal">
-        <div class="frame">
-          <img src="../images/ger-01.jpg" alt="Salon met landschapsraam en gordijnen" loading="lazy" />
-        </div>
-      </div>
-      <div class="reveal d1">
-        <div class="frame">
-          <img src="../images/ger-06.jpg" alt="Donkere gang, terracotta en hout" loading="lazy" />
-        </div>
-      </div>
+      <div class="reveal"><div class="frame"><img src="../images/ger-07.jpg" alt="Doorkijk van de salontafel naar de keuken" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../images/ger-09.jpg" alt="Eettafel met zwarte spijlenstoelen en booglamp voor een groen schilderij" loading="lazy" /></div></div>
     </div>
-
   </section>
 
   <section class="shell note">
     <div class="reveal"><p class="eyebrow">Over de materialen</p></div>
     <div class="reveal d1">
-      <p>De vloer is één doorlopend raster van handgevormde terracottategel, de kleur van droge aarde, die keuken, salon en gang materieel met elkaar verbindt. Wanden zijn bekleed met donker, verticaal geplaatst hout: gebrand tot diepbruin, met een nerf die voelbaar blijft onder de hand. De trappartij is van staal, onverhuld en constructief eerlijk. Het circulaire houten ribbeplafond toont de structuur van de woning zonder omhulsel, gedragen door de staalconstructie die onverhuld in de ruimte staat.</p>
-      <p>Donkere houten planken, verticaal geplaatst, doen twee dingen tegelijk: ze zetten de sfeer en breken het geluid in de grote, open ruimte. Terracottategels lopen als vloer door keuken, living en gang, en verbinden de ruimtes materieel met elkaar.</p>
-      <p>Tegenover dat donkere hout en de aardse tegel staat het keukeneiland in mat koper, warm en precies afgewogen, en gekozen om mooier te worden met gebruik. Elk materiaal hier is natuurlijk en bewust gekozen, niets is toevallig.</p>
+      <p>Wanden en plafond zijn afgewerkt in kalkpleister, licht en mat, met een wolkige textuur die het daglicht zacht verdeelt. De vloer is brede eiken plank in een warme grijsbruine tint en loopt zonder onderbreking van keuken tot zithoek.</p>
+      <p>Het travertijn is licht en in de lengte gezaagd, zodat de natuurlijke aders als fijne horizontale lijnen over eiland, werkblad en achterwand lopen. Daartegenover staat het gerookte eiken van de hoge kasten: een rustig, bijna zwart vlak dat de keuken verankert. Een gebogen kraan in geborsteld staal is het enige metaal aan het eiland.</p>
+      <p>Het meubilair spreekt dezelfde taal: een salontafel in massief donker hout, opgebouwd als gestapelde balken, zwarte spijlenstoelen rond een lange donkere tafel, banken en fauteuils in teak met rieten zitting, een kruk uit één stuk ruw hout. Keramiek, oude terracotta kruiken en kunst in diep blauw en mosgroen brengen kleur, zonder het geheel te overstemmen.</p>
     </div>
   </section>
 

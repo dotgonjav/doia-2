@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ger — Residential Interior Concept | Studio DOIA</title>
-<meta name="description" content="A kitchen and living space in an Antwerp terraced house, opened up into one wide interior." />
+<meta name="description" content="An open living space in an Antwerp home: kitchen, dining and lounge arranged around one block of pale travertine." />
 <link rel="canonical" href="https://doia.be/en/work/ger" />
 <link rel="alternate" hreflang="nl" href="https://doia.be/werk/ger" />
 <link rel="alternate" hreflang="en" href="https://doia.be/en/work/ger" />
@@ -12,14 +12,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Studio DOIA" />
 <meta property="og:title" content="Ger — Residential Interior Concept | Studio DOIA" />
-<meta property="og:description" content="A kitchen and living space in an Antwerp terraced house, opened up into one wide interior." />
+<meta property="og:description" content="An open living space in an Antwerp home: kitchen, dining and lounge arranged around one block of pale travertine." />
 <meta property="og:url" content="https://doia.be/en/work/ger" />
-<meta property="og:image" content="https://doia.be/og-image.jpg" />
+<meta property="og:image" content="https://doia.be/images/ger-01.jpg" />
 <meta property="og:locale" content="en_BE" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ger — Residential Interior Concept | Studio DOIA" />
-<meta name="twitter:description" content="A kitchen and living space in an Antwerp terraced house, opened up into one wide interior." />
-<meta name="twitter:image" content="https://doia.be/og-image.jpg" />
+<meta name="twitter:description" content="An open living space in an Antwerp home: kitchen, dining and lounge arranged around one block of pale travertine." />
+<meta name="twitter:image" content="https://doia.be/images/ger-01.jpg" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -30,8 +30,8 @@
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Ger",
-  "description": "Kitchen and living room in an Antwerp terraced house, opened up into one continuous interior.",
-  "image": "https://doia.be/images/ger-04.jpg",
+  "description": "Open living space in an Antwerp home, with kitchen, dining and lounge arranged around one block of pale travertine.",
+  "image": "https://doia.be/images/ger-01.jpg",
   "creator": {
     "@id": "https://doia.be/#studio"
   },
@@ -116,15 +116,10 @@
 
   /* gallery */
   .gallery { display: grid; gap: clamp(14px,2vw,22px); padding-block: clamp(40px,6vw,80px); }
-  .g-full { aspect-ratio: 16 / 9; }
-  .g-tall { aspect-ratio: 3 / 4; }
-  .g-pair { display: grid; gap: clamp(14px,2vw,22px); }
-  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } }
-  .g-pair .frame { aspect-ratio: 4 / 5; }
-  .g-trio { display: grid; gap: clamp(14px,2vw,22px); }
-  @media (min-width: 680px) { .g-trio { grid-template-columns: 1.1fr 0.9fr; } }
-  .g-trio .frame:first-child { aspect-ratio: 4 / 5; }
-  .g-trio .frame:last-child { aspect-ratio: 4 / 5; }
+  .g-full { aspect-ratio: 3 / 2; }
+  .g-pair, .g-trio { display: grid; gap: clamp(14px,2vw,22px); }
+  @media (min-width: 680px) { .g-pair { grid-template-columns: 1fr 1fr; } .g-trio { grid-template-columns: repeat(3, 1fr); } }
+  .g-pair .frame, .g-trio .frame { aspect-ratio: 2 / 3; }
   .cap { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: 9px; }
 
   /* materials note */
@@ -176,7 +171,7 @@
 
 <header class="proj-hero" data-screen-label="Ger, hero">
   <div class="frame">
-    <img src="../../images/ger-01.jpg" alt="Ger, living space with circular timber ribbed ceiling and landscape window" loading="eager" fetchpriority="high" />
+    <img src="../../images/ger-01.jpg" alt="Ger, dining table and lounge before floor-to-ceiling windows overlooking the landscape" loading="eager" fetchpriority="high" />
   </div>
   <div class="proj-hero__scrim"></div>
   <div class="proj-hero__cap">
@@ -197,63 +192,46 @@
     <div class="proj-intro">
       <div class="reveal">
         <p class="eyebrow" style="margin-bottom: 18px;">About the project</p>
-        <p>This terraced house arrived as a shell, without a fixed layout. The family who would live there did not want a standard everyday solution for kitchen, dining and living, and that called for <span class="pull">rethinking the vertical circulation within the narrow volume.</span></p>
+        <p>A family wanted to cook, eat and spend time together in one room, without that one room becoming restless. The answer lay in the ger itself: the nomadic tent with a single room, where everything happens around a fixed centre. <span class="pull">Here that centre is a kitchen made from one block of pale travertine, with dining table and lounge arranged around it along the windows.</span></p>
       </div>
       <div class="reveal d1">
-        <p>A void above the kitchen lifts the ceiling open and makes that one spot the heart of the house, an almost theatrical moment in the middle of daily life. At the same time the void works as a division: kitchen and living read as two rooms, without a wall being needed.</p>
-        <p style="margin-top: 1.1em;">Steel structure and a circular timber ribbed ceiling remain visible as the carrier of the whole, with terracotta tiles running beneath as one continuous ground.</p>
+        <p>The kitchen stands as a freestanding volume within the space. Tall cabinets in dark smoked oak form the back wall; in front of them stands the island, fully clad in travertine, with a sink cut from the same stone. Storage and services disappear behind the cabinet wall, so the living space itself stays empty and calm.</p>
+        <p style="margin-top: 1.1em;">Floor-to-ceiling windows run along the facade, behind linen curtains that soften the light. Dining table and lounge each sit on their own wool rug, as two places on one continuous oak floor. Every moment of the day gets a fixed place, without a single dividing wall.</p>
       </div>
     </div>
   </section>
 
   <section class="shell gallery">
-
     <div class="reveal">
-      <div class="frame g-full">
-        <img src="../../images/ger-05.jpg" alt="Overview of living area and kitchen" loading="lazy" />
-      </div>
+      <div class="frame g-full"><img src="../../images/ger-02.jpg" alt="Lounge with white sofa, solid timber coffee table and linen curtains" loading="lazy" /></div>
     </div>
-
     <div class="g-pair">
-      <div class="reveal">
-        <div class="frame">
-          <img src="../../images/ger-03.jpg" alt="Staircase and kitchen, terracotta floor" loading="lazy" />
-        </div>
-      </div>
-      <div class="reveal d1">
-        <div class="frame">
-          <img src="../../images/ger-02.jpg" alt="Living area, chairs and coffee table in light wood" loading="lazy" />
-        </div>
-      </div>
+      <div class="reveal"><div class="frame"><img src="../../images/ger-10.jpg" alt="Blue painting above the sofa, cane bench by the window" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../../images/ger-11.jpg" alt="Dark timber side table with ceramic lamp beside the sofa" loading="lazy" /></div></div>
     </div>
-
     <div class="reveal">
-      <div class="frame g-full">
-        <img src="../../images/ger-04.jpg" alt="Cooking island in matte bronze, frontal" loading="lazy" />
-      </div>
+      <div class="frame g-full"><img src="../../images/ger-03.jpg" alt="Kitchen with island in pale travertine and tall cabinets in smoked oak" loading="lazy" /></div>
     </div>
-
+    <div class="g-trio">
+      <div class="reveal"><div class="frame"><img src="../../images/ger-05.jpg" alt="Travertine island in front of the smoked oak cabinet wall" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../../images/ger-06.jpg" alt="Detail of the travertine sink with curved brushed steel tap" loading="lazy" /></div></div>
+      <div class="reveal d2"><div class="frame"><img src="../../images/ger-08.jpg" alt="Travertine island with cane chair and terracotta jars" loading="lazy" /></div></div>
+    </div>
+    <div class="reveal">
+      <div class="frame g-full"><img src="../../images/ger-04.jpg" alt="Lounge, frontal view, blue painting above the sofa" loading="lazy" /></div>
+    </div>
     <div class="g-pair">
-      <div class="reveal">
-        <div class="frame">
-          <img src="../../images/ger-01.jpg" alt="Lounge with landscape window and curtains" loading="lazy" />
-        </div>
-      </div>
-      <div class="reveal d1">
-        <div class="frame">
-          <img src="../../images/ger-06.jpg" alt="Dark hallway, terracotta and wood" loading="lazy" />
-        </div>
-      </div>
+      <div class="reveal"><div class="frame"><img src="../../images/ger-07.jpg" alt="View from the coffee table towards the kitchen" loading="lazy" /></div></div>
+      <div class="reveal d1"><div class="frame"><img src="../../images/ger-09.jpg" alt="Dining table with black spindle chairs and arc lamp before a green painting" loading="lazy" /></div></div>
     </div>
-
   </section>
 
   <section class="shell note">
     <div class="reveal"><p class="eyebrow">About the materials</p></div>
     <div class="reveal d1">
-      <p>The floor is one continuous grid of hand-formed terracotta tile, the colour of dry earth, materially connecting kitchen, lounge and hallway. Walls are clad in dark, vertically placed wood: charred to a deep brown, with a grain that stays palpable under the hand. The staircase is steel, unconcealed and structurally honest. The circular timber ribbed ceiling shows the structure of the house without casing, carried by the steel frame that stands openly in the space.</p>
-      <p>Dark timber boards, placed vertically, do two things at once: they set the atmosphere and break the sound in the large, open space. Terracotta tiles run as flooring through kitchen, living and hallway, connecting the rooms materially.</p>
-      <p>Against that dark wood and earthen tile stands the kitchen island in matte copper, warm and precisely balanced, chosen to grow more beautiful with use. Every material here is natural and deliberately chosen, nothing is accidental.</p>
+      <p>Walls and ceiling are finished in lime plaster, light and matte, with a clouded texture that spreads the daylight softly. The floor is wide oak plank in a warm grey-brown tone and runs without interruption from kitchen to lounge.</p>
+      <p>The travertine is pale and vein-cut, so its natural veins run as fine horizontal lines across island, worktop and splashback. Against it stands the smoked oak of the tall cabinets: a calm, almost black plane that anchors the kitchen. A curved tap in brushed steel is the only metal on the island.</p>
+      <p>The furniture speaks the same language: a coffee table in solid dark timber, built up like stacked beams, black spindle chairs around a long dark table, benches and armchairs in teak with cane seats, a stool cut from a single piece of raw wood. Ceramics, old terracotta jars and art in deep blue and moss green bring colour without overpowering the whole.</p>
     </div>
   </section>
 
