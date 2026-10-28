@@ -42,13 +42,13 @@
 <style>
   .nf {
     min-height: 100svh; display: flex; flex-direction: column;
-    align-items: flex-start; justify-content: center; gap: clamp(20px, 3vw, 34px);
-    padding-block: clamp(120px, 18vh, 200px);
+    align-items: flex-start; justify-content: center; gap: var(--sp-s);
+    padding-block: var(--sp-head);
   }
   .nf__code { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
   .nf__title { font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; font-size: clamp(2.2rem, 6vw, 4.6rem); max-width: 18ch; }
   .nf__sub { color: var(--ink-2); max-width: 46ch; }
-  .nf__links { display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 36px); margin-top: clamp(8px, 1.5vw, 16px); }
+  .nf__links { display: flex; flex-wrap: wrap; gap: var(--sp-s); margin-top: var(--sp-xs); }
 </style>
 </head>
 <body>
@@ -69,7 +69,7 @@
   <div class="nf__links">
     <a href="/" class="link-line">Naar de homepagina →</a>
     <a href="/werk" class="link-line">Bekijk het werk →</a>
-    <a href="/contact" class="link-line">Contact →</a>
+    <a href="/contact" class="link-line">Plan een kennismaking →</a>
   </div>
 </main>
 

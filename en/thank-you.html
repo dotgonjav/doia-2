@@ -55,28 +55,28 @@
   .nav__brand { font-size: 0.65rem; letter-spacing: 0.18em; }
 
   .ty { min-height: 100svh; display: grid; align-items: center; }
-  .ty__inner { padding-top: clamp(140px, 20vh, 240px); padding-bottom: clamp(70px, 12vw, 140px); }
-  .ty__grid { display: grid; gap: clamp(28px, 5vw, 60px); }
+  .ty__inner { padding-top: var(--sp-head); padding-bottom: var(--sp-xl); }
+  .ty__grid { display: grid; gap: var(--sp-m); }
   @media (min-width: 860px) { .ty__grid { grid-template-columns: 1fr 1fr; align-items: start; } }
 
-  .ty h1 { margin-top: 20px; }
-  .ty__lead { margin-top: clamp(24px, 4vw, 36px); color: var(--ink-2); }
+  .ty h1 { margin-top: 24px; }
+  .ty__lead { margin-top: var(--sp-s); color: var(--ink-2); }
 
   .ty__next { border-top: 1px solid var(--line); }
-  .ty__step { display: grid; grid-template-columns: auto 1fr; gap: clamp(16px, 2.5vw, 28px); align-items: baseline; padding: clamp(18px, 2.5vw, 26px) 0; border-bottom: 1px solid var(--line); }
+  .ty__step { display: grid; grid-template-columns: auto 1fr; gap: var(--sp-s); align-items: baseline; padding: var(--sp-s) 0; border-bottom: 1px solid var(--line); }
   .ty__no { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; color: var(--accent); }
   .ty__step p { color: var(--ink-2); font-weight: 300; font-size: 0.98rem; line-height: 1.5; }
   .ty__step p strong { color: var(--ink); font-weight: 400; }
 
-  .ty__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(34px, 5vw, 52px); }
+  .ty__actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: var(--sp-m); }
   .ty__back {
     display: inline-flex; align-items: center; gap: 12px;
     background: var(--ink); color: var(--paper);
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem;
-    border: 1px solid var(--ink); padding: 15px 28px; text-decoration: none;
+    border: 1px solid var(--ink); padding: 16px 32px; text-decoration: none;
     transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), gap 0.4s var(--ease);
   }
-  .ty__back:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 20px; }
+  .ty__back:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 24px; }
   .ty__back--ghost { background: transparent; color: var(--ink); }
   .ty__back--ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 </style>
@@ -103,7 +103,7 @@
           <p class="lead ty__lead">Your message has arrived safely. You will hear from us within two working days.</p>
           <div class="ty__actions">
             <a class="ty__back" href="/en/work">View the work →</a>
-            <a class="ty__back ty__back--ghost" href="/en/">Back to home</a>
+            <a class="ty__back ty__back--ghost" href="/en/">To the homepage →</a>
           </div>
         </div>
 

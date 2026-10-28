@@ -57,35 +57,35 @@
 <script src="../analytics.js" defer></script>
 <style>
   .nav__brand { font-size: 0.65rem; letter-spacing: 0.18em; }
-  .page-head { padding-top: clamp(120px, 18vh, 220px); padding-bottom: clamp(30px, 5vw, 56px); border-bottom: 1px solid var(--line); }
+  .page-head { padding-top: var(--sp-head); padding-bottom: var(--sp-m); border-bottom: 1px solid var(--line); }
   .legal-layout {
-    display: grid; grid-template-columns: 1fr; gap: clamp(40px,6vw,80px);
-    padding-block: clamp(50px,8vw,100px);
+    display: grid; grid-template-columns: 1fr; gap: var(--sp-l);
+    padding-block: var(--sp-xl);
   }
   @media (min-width: 860px) { .legal-layout { grid-template-columns: 200px 1fr; align-items: start; } }
   .toc { display: flex; flex-direction: column; gap: 0; }
   @media (min-width: 860px) { .toc { position: sticky; top: 80px; } }
-  .toc__title { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .toc__title { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 16px; }
   .toc a {
     display: block; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--ink-3); padding: 7px 0;
+    text-transform: uppercase; color: var(--ink-3); padding: 8px 0;
     border-top: 1px solid var(--line); line-height: 1.3;
     transition: color 0.3s var(--ease);
   }
   .toc a:hover { color: var(--ink); }
   .legal h2 {
     font-weight: 300; font-size: clamp(1.1rem, 2vw, 1.45rem); letter-spacing: -0.01em;
-    margin-top: clamp(40px,6vw,64px); margin-bottom: 14px;
-    padding-top: clamp(28px,4vw,44px); border-top: 1px solid var(--line);
+    margin-top: var(--sp-m); margin-bottom: 16px;
+    padding-top: var(--sp-m); border-top: 1px solid var(--line);
     scroll-margin-top: 90px;
   }
   .legal h2:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
-  .legal p { color: var(--ink-2); margin-bottom: 1em; max-width: 62ch; }
-  .legal ul { margin: 0 0 1em 0; padding-left: 1.4em; }
+  .legal p { color: var(--ink-2); margin-bottom: 1.25em; max-width: 62ch; }
+  .legal ul { margin: 0 0 1.25em 0; padding-left: 1.4em; }
   .legal ul li { color: var(--ink-2); margin-bottom: 0.4em; }
   .legal a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-  .legal .meta { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: clamp(28px,4vw,44px); }
-  .legal .note-binding { border: 1px solid var(--line); padding: 16px 18px; font-size: 0.9rem; color: var(--ink-2); margin-bottom: clamp(28px,4vw,44px); max-width: 62ch; }
+  .legal .meta { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: var(--sp-m); }
+  .legal .note-binding { border: 1px solid var(--line); padding: 16px 16px; font-size: 0.9rem; color: var(--ink-2); margin-bottom: var(--sp-m); max-width: 62ch; }
   .legal .note-binding a { white-space: nowrap; }
 </style>
 </head>
@@ -102,7 +102,7 @@
 <main>
   <header class="shell page-head">
     <p class="eyebrow reveal">Legal</p>
-    <h1 class="h-display reveal d1" style="margin-top:18px;">Privacy policy</h1>
+    <h1 class="h-display reveal d1 u-mt-16">Privacy policy</h1>
   </header>
   <div class="shell legal-layout">
     <nav class="toc reveal" aria-label="Table of contents">

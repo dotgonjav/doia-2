@@ -161,42 +161,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Wat doet een interieurarchitect?",
+      "name": "Waar vinden de gesprekken plaats?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Een interieurarchitect ontwerpt ruimten die functioneel, mooi en emotioneel resonerend zijn, met focus op lay-out, materialen, licht en sfeer."
+        "text": "Bij u, in de ruimte zelf. Daar zie en voel ik hoe u leeft, en daar begint het ontwerp. De studio ontvangt geen bezoekers."
       }
     },
     {
       "@type": "Question",
-      "name": "Hoe werkt uw ontwerpproces?",
+      "name": "Hoe verloopt het ontwerpproces?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Alles begint bij luisteren naar u. Uw noden, manier van leven en dromen worden vertaald naar een ontwerp op maat, begeleid van concept over materialen tot uitvoering."
+        "text": "Het begint met een gesprek bij u ter plaatse. Daarna volgen een concept, het definitieve ontwerp en, als u dat wenst, de begeleiding van de uitvoering tot de oplevering."
       }
     },
     {
       "@type": "Question",
-      "name": "Wat is uw ontwerpaanpak of stijl?",
+      "name": "Wat is uw stijl?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Rustige, tijdloze interieurs in eerlijke materialen die u mag zien en voelen zoals ze zijn. Het ontwerp vertrekt niet van een stijl, maar van hoe u uw dagen doorbrengt. Geïnspireerd door natuur en ritueel, en ontworpen vanuit wie u bent."
+        "text": "Ik vertrek niet van een stijl, maar van hoe u uw dagen doorbrengt. Het resultaat is rustig en tijdloos, in eerlijke materialen die u mag zien en voelen zoals ze zijn."
       }
     },
     {
       "@type": "Question",
-      "name": "Kunt u de bouw en uitvoering begeleiden?",
+      "name": "Begeleidt u ook de uitvoering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Aannemers en ambachtslieden worden van nabij aangestuurd, zodat u zich nergens zorgen over hoeft te maken en uw ontwerp tot in het laatste detail klopt."
+        "text": "Ja. Ik stuur aannemers en ambachtslieden aan en volg de werf op tot de oplevering, zodat het ontwerp tot in het laatste detail klopt."
       }
     },
     {
       "@type": "Question",
-      "name": "Hoe start ik een project met u?",
+      "name": "Hoe begint een samenwerking?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Neem contact op via de contactpagina voor een eerste gesprek. Tijdens dat gesprek verkent u uw noden en of de samenwerking de juiste keuze is."
+        "text": "Met een korte vragenlijst op de contactpagina. Daarna neem ik zelf contact op om een eerste gesprek bij u te plannen."
       }
     }
   ]
@@ -241,16 +241,16 @@
   .hero__cap { position: absolute; left: var(--gut); right: var(--gut); bottom: 32px; z-index: 3; color: #fff; }
   .hero__statement {
     color: #fff; font-weight: 300; letter-spacing: -0.015em; line-height: 1.08;
-    font-size: clamp(2rem, 4.8vw, 4rem); max-width: 14ch; margin-bottom: 22px;
+    font-size: clamp(2rem, 4.8vw, 4rem); max-width: 14ch; margin-bottom: 24px;
     font-family: var(--sans);
   }
-  .hero__row { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+  .hero__row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
   .hero__row .mono { color: rgba(255,255,255,.88); }
   .hero__scroll {
     position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%);
     z-index: 3; color: rgba(255,255,255,.72); pointer-events: none;
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem;
-    display: inline-flex; align-items: center; gap: 9px;
+    display: inline-flex; align-items: center; gap: 8px;
   }
   @media (prefers-reduced-motion: no-preference) {
     .hero__scroll .arrow { animation: scrollNudge 1.8s ease-in-out infinite; }
@@ -259,39 +259,39 @@
   @media (max-width: 600px) { .hero__scroll { display: none; } }
 
   /* ethos */
-  .ethos { display: grid; gap: clamp(28px, 5vw, 60px); padding-block: clamp(72px, 11vw, 150px); }
+  .ethos { display: grid; gap: var(--sp-m); padding-block: var(--sp-xl); }
   @media (min-width: 880px) { .ethos { grid-template-columns: 0.9fr 1.1fr; align-items: start; } }
   .ethos__body p { color: var(--ink-2); margin-bottom: 1.25em; max-width: 56ch; }
   .ethos__body p:last-of-type { margin-bottom: 0; }
   .ethos__body .pull { color: var(--ink); font-weight: 400; }
 
   /* selected work */
-  .selected { padding-top: clamp(20px, 4vw, 40px); }
+  .selected { padding-block: 0 var(--sp-xl); }
   .feat { display: block; text-decoration: none; color: inherit; }
   .selected__lead { aspect-ratio: 16 / 9; }
-  .selected__pair { display: grid; grid-template-columns: 1fr; gap: clamp(16px,2.5vw,28px); margin-top: clamp(40px,6vw,72px); }
+  .selected__pair { display: grid; grid-template-columns: 1fr; gap: var(--sp-s); margin-top: var(--sp-l); }
   @media (min-width: 720px) { .selected__pair { grid-template-columns: 1fr 1fr; } }
   .selected__pair .frame { aspect-ratio: 4 / 3; }
   @media (max-width: 719px) { .selected__lead { aspect-ratio: 4 / 3; } }
-  .proj-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 18px; }
+  .proj-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 16px; }
   .proj-meta__title { font-size: clamp(1.2rem, 2vw, 1.7rem); font-weight: 300; letter-spacing: -0.01em; }
   .proj-meta__tags { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); text-align: right; }
-  .selected__more { display: flex; justify-content: flex-start; margin-top: clamp(40px, 6vw, 72px); }
+  .selected__more { display: flex; justify-content: flex-start; margin-top: var(--sp-l); }
 
   /* services */
-  .services { padding-block: clamp(80px, 12vw, 160px); border-top: 1px solid var(--line); margin-top: clamp(70px,10vw,140px); }
-  .services__list { display: grid; grid-template-columns: 1fr; gap: clamp(18px, 2.5vw, 28px); }
+  .services { padding-block: var(--sp-xl); border-top: 1px solid var(--line); }
+  .services__list { display: grid; grid-template-columns: 1fr; gap: var(--sp-s); }
   @media (min-width: 820px) { .services__list { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto 1fr auto; } .services__list .svc { grid-row: span 3; grid-template-rows: subgrid; } }
   .svc {
-    display: grid; grid-template-rows: auto 1fr auto; align-content: start; color: inherit; text-decoration: none; gap: clamp(22px, 3vw, 36px);
-    padding: clamp(28px, 3.2vw, 44px); border: 1px solid var(--line); background: var(--paper);
+    display: grid; grid-template-rows: auto 1fr auto; align-content: start; color: inherit; text-decoration: none; gap: var(--sp-s);
+    padding: var(--sp-m); border: 1px solid var(--line); background: var(--paper);
     transition: border-color 0.5s var(--ease), background 0.5s var(--ease);
   }
-  .svc__head { display: grid; gap: clamp(18px, 2.5vw, 28px); padding-bottom: clamp(18px, 2.5vw, 28px); border-bottom: 1px solid var(--line); }
+  .svc__head { display: grid; gap: var(--sp-s); padding-bottom: var(--sp-s); border-bottom: 1px solid var(--line); }
   .svc:hover { border-color: var(--ink-3); background: var(--paper-2); }
   .svc:hover .svc__no { color: var(--accent); }
   .svc__no { transition: color 0.5s var(--ease); }
-  .svc__cta { display: inline-flex; gap: 10px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--ink); transition: gap 0.4s var(--ease), color 0.4s var(--ease); }
+  .svc__cta { display: inline-flex; gap: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--ink); transition: gap 0.4s var(--ease), color 0.4s var(--ease); }
   .svc:hover .svc__cta { gap: 16px; color: var(--accent); }
   .svc__no { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase; }
   .svc__name { font-size: clamp(1.3rem, 2.2vw, 1.9rem); font-weight: 300; letter-spacing: -0.01em; }
@@ -302,13 +302,13 @@
   }
 
   /* faq */
-  .faq { padding-block: clamp(60px,9vw,120px); border-top: 1px solid var(--line); }
-  .faq__list { border-top: 1px solid var(--line); margin-top: clamp(30px,5vw,56px); }
+  .faq { padding-block: var(--sp-xl); border-top: 1px solid var(--line); }
+  .faq__list { border-top: 1px solid var(--line); margin-top: var(--sp-m); }
   .qa { border-bottom: 1px solid var(--line); }
   .qa__q {
     width: 100%; background: none; border: 0; cursor: pointer; text-align: left;
     display: flex; justify-content: space-between; align-items: center; gap: 24px;
-    padding: clamp(22px,3vw,34px) 0; color: var(--ink);
+    padding: var(--sp-s) 0; color: var(--ink);
     font-family: var(--sans); font-weight: 300; font-size: clamp(1.1rem,2vw,1.5rem); letter-spacing: -0.01em;
     transition: color 0.3s var(--ease);
   }
@@ -319,21 +319,21 @@
   .qa__icon::after { left: 50%; top: 0; width: 1px; height: 100%; transform: translateX(-50%); }
   .qa[aria-expanded="true"] .qa__icon::after { transform: translateX(-50%) scaleY(0); opacity: 0; }
   .qa__a { overflow: hidden; height: 0; transition: height 0.45s var(--ease); }
-  .qa__a-inner { padding-bottom: clamp(22px,3vw,34px); color: var(--ink-2); max-width: 60ch; }
+  .qa__a-inner { padding-bottom: var(--sp-s); color: var(--ink-2); max-width: 60ch; }
   .qa__a-inner a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); transition: color 0.35s var(--ease), text-decoration-color 0.35s var(--ease); }
   .qa__a-inner a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
   /* CTA */
-  .cta { padding-block: clamp(80px, 12vw, 170px); text-align: center; }
-  .cta h2 { font-weight: 300; letter-spacing: -0.02em; line-height: 1.08; font-size: clamp(2rem, 6vw, 4.6rem); max-width: 18ch; margin: 0 auto clamp(34px,5vw,52px); }
+  .cta { padding-block: var(--sp-xl); border-top: 1px solid var(--line); text-align: center; }
+  .cta h2 { font-weight: 300; letter-spacing: -0.02em; line-height: 1.08; font-size: clamp(2rem, 6vw, 4.6rem); max-width: 18ch; margin: 0 auto var(--sp-m); }
   .btn {
     display: inline-flex; align-items: center; gap: 12px;
     background: var(--ink); color: var(--paper);
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem;
-    border: 1px solid var(--ink); padding: 16px 30px; cursor: pointer;
+    border: 1px solid var(--ink); padding: 16px 32px; cursor: pointer;
     transition: background 0.4s var(--ease), color 0.4s var(--ease), gap 0.4s var(--ease);
   }
-  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 20px; }
+  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 24px; }
 
   /* nav brand: longer name needs slightly smaller font */
   .nav__brand { font-size: 0.65rem; letter-spacing: 0.18em; }
@@ -372,12 +372,12 @@
   <section class="shell ethos">
     <div class="reveal">
       <p class="eyebrow">Ethos</p>
-      <h2 class="h-lg" style="margin-top: 22px; max-width: 18ch;">Geïnspireerd door natuur en ritueel.</h2>
+      <h2 class="h-lg u-mt-16" style="max-width: 18ch;">Geïnspireerd door natuur en ritueel.</h2>
     </div>
     <div class="ethos__body reveal d1">
-      <p><span class="pull">Uw ruimte wordt ontworpen vanuit wie u bent</span>, geïnspireerd door natuur en ritueel. Eerlijke, natuurlijke materialen die ruiken, ademen en evolueren, samen vormen ze een interieur dat in harmonie is met zijn omgeving.</p>
-      <p>Of het nu uw thuis is, een kantoor, een winkel of een plek voor gasten: u werkt rechtstreeks met één interieurarchitect, van het eerste gesprek tot het laatste detail. Wat volgt is een interieur dat persoonlijk aanvoelt, tijdloos is en gemaakt om te blijven.</p>
-      <a href="/studio" class="link-line" style="margin-top: 28px;">Over de studio →</a>
+      <p><span class="pull">Uw ruimte wordt ontworpen vanuit wie u bent.</span> De natuur geeft het materiaal en het licht; uw rituelen, hoe u ontwaakt, kookt, ontvangt en tot rust komt, geven de vorm.</p>
+      <p>Of het nu uw thuis is, een kantoor, een winkel of een plek voor gasten: u werkt rechtstreeks met één interieurarchitect. Het resultaat voelt persoonlijk, is tijdloos en is gemaakt om te blijven.</p>
+      <a href="/studio" class="link-line u-mt-32">Over de studio →</a>
     </div>
   </section>
 
@@ -394,7 +394,7 @@
     </a>
 
     <div class="selected__more reveal">
-      <a href="/werk" class="link-line">Alle projecten →</a>
+      <a href="/werk" class="link-line">Bekijk het werk →</a>
     </div>
   </section>
 
@@ -406,13 +406,13 @@
     <div class="services__list">
       <a class="svc reveal" href="/contact?dienst=advies">
         <div class="svc__head"><span class="svc__no">01</span><span class="svc__name">Ruimtelijk advies</span></div>
-        <p class="svc__desc">Tijdens een huisbezoek van één tot drie uur leren u en ik elkaar kennen. Ik luister naar uw noden en wensen en geef ter plaatse advies over wat er kan veranderen: ruimtelijk, in kleur en in stijl. Voelt het goed, dan gaat u verder met Ontwerp of Ontwerp met begeleiding.</p><span class="svc__cta">Aanvragen →</span></a>
+        <p class="svc__desc">Tijdens een huisbezoek van één tot drie uur leren u en ik elkaar kennen. Ik luister naar hoe u leeft en wat u wilt, en geef ter plaatse advies over wat er kan veranderen: ruimtelijk, in kleur en in stijl. Voelt het goed, dan gaat u verder met Ontwerp of Ontwerp met begeleiding.</p><span class="svc__cta">Bespreken →</span></a>
       <a class="svc reveal d1" href="/contact?dienst=ontwerp">
         <div class="svc__head"><span class="svc__no">02</span><span class="svc__name">Ontwerp</span></div>
-        <p class="svc__desc">Op basis van de opmeting werk ik een volledig concept uit: plannen van de bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, een materiaal- en kleurplan en een verlichtingsplan. Twee revisierondes zijn inbegrepen.</p><span class="svc__cta">Aanvragen →</span></a>
+        <p class="svc__desc">Op basis van de opmeting werk ik een volledig concept uit: plannen van de bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, een materiaal- en kleurplan en een verlichtingsplan. Twee revisierondes zijn inbegrepen.</p><span class="svc__cta">Bespreken →</span></a>
       <a class="svc reveal d2" href="/contact?dienst=begeleiding">
         <div class="svc__head"><span class="svc__no">03</span><span class="svc__name">Ontwerp met begeleiding</span></div>
-        <p class="svc__desc">Alles uit Ontwerp, aangevuld met een meetstaat en de aanbesteding: offertes worden vergeleken en de werf wordt opgevolgd tot en met de oplevering, steeds in nauwe samenwerking met een ervaren aannemer of werfleider.</p><span class="svc__cta">Aanvragen →</span></a>
+        <p class="svc__desc">Alles uit Ontwerp, aangevuld met een meetstaat en de aanbesteding: ik vergelijk de offertes en volg de werf op tot en met de oplevering, in nauwe samenwerking met een ervaren aannemer of werfleider.</p><span class="svc__cta">Bespreken →</span></a>
     </div>
   </section>
 
@@ -423,24 +423,24 @@
     </div>
     <div class="faq__list">
       <div class="qa reveal">
-        <button class="qa__q" aria-expanded="false"><span>Wat doet een interieurarchitect?</span><span class="qa__icon"></span></button>
-        <div class="qa__a"><div class="qa__a-inner">Een interieurarchitect ontwerpt ruimten die functioneel, mooi en emotioneel resonerend zijn, met focus op lay-out, materialen, licht en sfeer.</div></div>
+        <button class="qa__q" aria-expanded="false"><span>Waar vinden de gesprekken plaats?</span><span class="qa__icon"></span></button>
+        <div class="qa__a"><div class="qa__a-inner">Bij u, in de ruimte zelf. Daar zie en voel ik hoe u leeft, en daar begint het ontwerp. De studio ontvangt geen bezoekers.</div></div>
       </div>
       <div class="qa reveal">
-        <button class="qa__q" aria-expanded="false"><span>Hoe werkt uw ontwerpproces?</span><span class="qa__icon"></span></button>
-        <div class="qa__a"><div class="qa__a-inner">Alles begint bij luisteren naar u. Uw noden, manier van leven en dromen worden vertaald naar een ontwerp op maat, begeleid van concept over materialen tot uitvoering.</div></div>
+        <button class="qa__q" aria-expanded="false"><span>Hoe verloopt het ontwerpproces?</span><span class="qa__icon"></span></button>
+        <div class="qa__a"><div class="qa__a-inner">Het begint met een gesprek bij u ter plaatse. Daarna volgen een concept, het definitieve ontwerp en, als u dat wenst, de begeleiding van de uitvoering tot de oplevering.</div></div>
       </div>
       <div class="qa reveal">
-        <button class="qa__q" aria-expanded="false"><span>Wat is uw ontwerpaanpak of stijl?</span><span class="qa__icon"></span></button>
-        <div class="qa__a"><div class="qa__a-inner">Rustige, tijdloze interieurs in eerlijke materialen die u mag zien en voelen zoals ze zijn. Het ontwerp vertrekt niet van een stijl, maar van hoe u uw dagen doorbrengt. Geïnspireerd door natuur en ritueel, en ontworpen vanuit wie u bent.</div></div>
+        <button class="qa__q" aria-expanded="false"><span>Wat is uw stijl?</span><span class="qa__icon"></span></button>
+        <div class="qa__a"><div class="qa__a-inner">Ik vertrek niet van een stijl, maar van hoe u uw dagen doorbrengt. Het resultaat is rustig en tijdloos, in eerlijke materialen die u mag zien en voelen zoals ze zijn.</div></div>
       </div>
       <div class="qa reveal">
-        <button class="qa__q" aria-expanded="false"><span>Kunt u de bouw en uitvoering begeleiden?</span><span class="qa__icon"></span></button>
-        <div class="qa__a"><div class="qa__a-inner">Ja. Aannemers en ambachtslieden worden van nabij aangestuurd, zodat u zich nergens zorgen over hoeft te maken en uw ontwerp tot in het laatste detail klopt.</div></div>
+        <button class="qa__q" aria-expanded="false"><span>Begeleidt u ook de uitvoering?</span><span class="qa__icon"></span></button>
+        <div class="qa__a"><div class="qa__a-inner">Ja. Ik stuur aannemers en ambachtslieden aan en volg de werf op tot de oplevering, zodat het ontwerp tot in het laatste detail klopt.</div></div>
       </div>
       <div class="qa reveal">
-        <button class="qa__q" aria-expanded="false"><span>Hoe start ik een project met u?</span><span class="qa__icon"></span></button>
-        <div class="qa__a"><div class="qa__a-inner"><a href="/contact">Neem contact op</a> via de contactpagina voor een eerste gesprek. Tijdens dat gesprek verkent u uw noden en of de samenwerking de juiste keuze is.</div></div>
+        <button class="qa__q" aria-expanded="false"><span>Hoe begint een samenwerking?</span><span class="qa__icon"></span></button>
+        <div class="qa__a"><div class="qa__a-inner">Met een korte vragenlijst op de <a href="/contact">contactpagina</a>. Daarna neem ik zelf contact op om een eerste gesprek bij u te plannen.</div></div>
       </div>
     </div>
   </section>
@@ -448,7 +448,7 @@
   <!-- CTA -->
   <section class="shell cta">
     <h2 class="reveal">Van het eerste gesprek tot het laatste detail.</h2>
-    <div class="reveal d1"><a href="/contact" class="btn">Start uw project →</a></div>
+    <div class="reveal d1"><a href="/contact" class="btn">Plan een kennismaking →</a></div>
   </section>
 </main>
 

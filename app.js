@@ -49,7 +49,28 @@
     }, 5000);
   }
 
+  // ---- nav: verborgen bij laden, verschijnt bij scroll / aanraking / muisbeweging ----
+  function initNavReveal() {
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    var t = null, IDLE = 2600;
+    function hideIfIdle() {
+      if (window.scrollY > 8 || nav.matches(':hover') || nav.contains(document.activeElement)) return;
+      nav.classList.remove('is-shown');
+    }
+    function show() {
+      nav.classList.add('is-shown');
+      clearTimeout(t); t = setTimeout(hideIfIdle, IDLE);
+    }
+    window.addEventListener('scroll', function () { if (window.scrollY > 8) { nav.classList.add('is-shown'); clearTimeout(t); } else show(); }, { passive: true });
+    window.addEventListener('mousemove', show, { passive: true });
+    window.addEventListener('touchstart', show, { passive: true });
+    window.addEventListener('keydown', function (e) { if (e.key === 'Tab') show(); });
+    nav.addEventListener('mouseleave', function () { clearTimeout(t); t = setTimeout(hideIfIdle, IDLE); });
+    if (window.scrollY > 8) nav.classList.add('is-shown');
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () { initReveal(); initNav(); initHero(); });
-  } else { initReveal(); initNav(); initHero(); }
+    document.addEventListener('DOMContentLoaded', function () { initReveal(); initNav(); initNavReveal(); initHero(); });
+  } else { initReveal(); initNav(); initNavReveal(); initHero(); }
 })();
