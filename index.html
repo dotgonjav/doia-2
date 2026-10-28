@@ -289,16 +289,16 @@
   }
   .svc__head { display: grid; gap: var(--sp-s); padding-bottom: var(--sp-s); border-bottom: 1px solid var(--line); }
   .svc:hover { border-color: var(--ink-3); background: var(--paper-2); }
-  .svc:hover .svc__no { color: var(--accent); }
+  .svc:hover .svc__no { color: var(--ink); }
   .svc__no { transition: color 0.5s var(--ease); }
   .svc__cta { display: inline-flex; gap: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--ink); transition: gap 0.4s var(--ease), color 0.4s var(--ease); }
-  .svc:hover .svc__cta { gap: 16px; color: var(--accent); }
+  .svc:hover .svc__cta { gap: 16px; color: var(--ink); }
   .svc__no { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--ink-3); text-transform: uppercase; }
   .svc__name { font-size: clamp(1.3rem, 2.2vw, 1.9rem); font-weight: 300; letter-spacing: -0.01em; }
   .svc__desc { color: var(--ink-2); max-width: 46ch; }
   .svc__price {
     font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--accent); text-align: right;
+    text-transform: uppercase; color: var(--ink); text-align: right;
   }
 
   /* faq */
@@ -312,7 +312,7 @@
     font-family: var(--sans); font-weight: 300; font-size: clamp(1.1rem,2vw,1.5rem); letter-spacing: -0.01em;
     transition: color 0.3s var(--ease);
   }
-  .qa__q:hover { color: var(--accent); }
+  .qa__q:hover { color: var(--ink-2); }
   .qa__icon { flex: none; width: 16px; height: 16px; position: relative; }
   .qa__icon::before, .qa__icon::after { content: ""; position: absolute; background: currentColor; transition: transform 0.4s var(--ease), opacity 0.4s var(--ease); }
   .qa__icon::before { left: 0; top: 50%; width: 100%; height: 1px; transform: translateY(-50%); }
@@ -321,7 +321,7 @@
   .qa__a { overflow: hidden; height: 0; transition: height 0.45s var(--ease); }
   .qa__a-inner { padding-bottom: var(--sp-s); color: var(--ink-2); max-width: 60ch; }
   .qa__a-inner a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); transition: color 0.35s var(--ease), text-decoration-color 0.35s var(--ease); }
-  .qa__a-inner a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  .qa__a-inner a:hover { color: var(--ink-2); text-decoration-color: var(--ink-2); }
 
   /* CTA */
   .cta { padding-block: var(--sp-xl); border-top: 1px solid var(--line); text-align: center; }
@@ -331,9 +331,9 @@
     background: var(--ink); color: var(--paper);
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem;
     border: 1px solid var(--ink); padding: 16px 32px; cursor: pointer;
-    transition: background 0.4s var(--ease), color 0.4s var(--ease), gap 0.4s var(--ease);
+    transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), gap 0.4s var(--ease);
   }
-  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 24px; }
+  .btn:hover { background: var(--paper); border-color: var(--ink); color: var(--ink); gap: 24px; }
 
   /* nav brand: longer name needs slightly smaller font */
   .nav__brand { font-size: 0.65rem; letter-spacing: 0.18em; }
@@ -356,9 +356,7 @@
   <div class="frame">
     <div class="hero__slide is-active"><img src="images/baigal-01.jpg" alt="Baigal, bureau en lavabo in rood travertijn onder een groot raam" loading="eager" fetchpriority="high" /></div>
     <div class="hero__slide"><img src="images/ger-01.jpg" alt="Ger, eettafel en zithoek voor ramen met zicht op het landschap" loading="lazy" /></div>
-    <div class="hero__slide"><img src="images/shar-03.jpg" alt="Shar, keuken in geel mortex binnen het betonnen casco" loading="lazy" /></div>
     <div class="hero__slide"><img src="images/ger-03.jpg" alt="Ger, keukeneiland in licht travertijn" loading="lazy" /></div>
-    <div class="hero__slide"><img src="images/shar-05.jpg" alt="Shar, badruimte in geel mortex" loading="lazy" /></div>
   </div>
   <div class="hero__scrim"></div>
   <div class="hero__cap">
@@ -406,7 +404,7 @@
     <div class="services__list">
       <a class="svc reveal" href="/contact?dienst=advies">
         <div class="svc__head"><span class="svc__no">01</span><span class="svc__name">Ruimtelijk advies</span></div>
-        <p class="svc__desc">Tijdens een huisbezoek van één tot drie uur leren u en ik elkaar kennen. Ik luister naar hoe u leeft en wat u wilt, en geef ter plaatse advies over wat er kan veranderen: ruimtelijk, in kleur en in stijl. Voelt het goed, dan gaat u verder met Ontwerp of Ontwerp met begeleiding.</p><span class="svc__cta">Bespreken →</span></a>
+        <p class="svc__desc">Tijdens een huisbezoek van één tot drie uur luister ik naar hoe u leeft en wat u wilt, en geef ik ter plaatse advies over wat er kan veranderen: ruimtelijk, in kleur en in stijl. Klikt het, dan kunt u verder met Ontwerp of Ontwerp met begeleiding.</p><span class="svc__cta">Bespreken →</span></a>
       <a class="svc reveal d1" href="/contact?dienst=ontwerp">
         <div class="svc__head"><span class="svc__no">02</span><span class="svc__name">Ontwerp</span></div>
         <p class="svc__desc">Op basis van de opmeting werk ik een volledig concept uit: plannen van de bestaande en nieuwe toestand, doorsnedes, 3D-visualisaties, een materiaal- en kleurplan en een verlichtingsplan. Twee revisierondes zijn inbegrepen.</p><span class="svc__cta">Bespreken →</span></a>

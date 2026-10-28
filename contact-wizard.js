@@ -22,7 +22,7 @@
       { v: 'Spatial advice', s: 'Home visit with advice on site', k: 'advies' },
       { v: 'Design', s: 'Complete concept, plans and 3D', k: 'ontwerp' },
       { v: 'Design with guidance', s: 'Design, bill of quantities, tender and site', k: 'begeleiding' },
-      { v: 'Not sure yet', s: 'We look together at what fits' }] },
+      { v: 'Not sure yet', s: 'To be explored together' }] },
     { id: 'type', req: true, label: 'Type of property', q: 'What type of property is it?', opts: ['House', 'Apartment', 'Shop', 'Office', 'Hospitality', 'Other'] },
     { id: 'ruimtes', req: true, label: 'Rooms', multi: true, q: 'Which rooms would you like to work on?', ph: 'E.g. practice room, studio, waiting room', byType: [H = ['Kitchen', 'Living room', 'Dining room', 'Bathroom', 'Bedroom', 'Study', 'Entrance and hall', 'Entire home'], H, ['Sales floor', 'Shop window', 'Counter and checkout', 'Fitting rooms', 'Storage', 'Staff room', 'Entire shop'], ['Workspaces', 'Meeting room', 'Reception', 'Executive office', 'Pantry', 'Restrooms', 'Entire office'], ['Dining room', 'Bar', 'Lounge', 'Terrace', 'Kitchen', 'Restrooms', 'Hotel rooms', 'Entire venue'], null] },
     { id: 'aard', req: true, label: 'New build / renovation', q: 'Is it a new build or a renovation?', opts: ['New build / shell', 'Renovation', 'Refurnishing without major works'] },

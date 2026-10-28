@@ -111,7 +111,7 @@
   .senses { grid-column: 1 / -1; display: grid; gap: var(--sp-xs); }
   @media (min-width: 720px) { .senses { grid-template-columns: repeat(3, 1fr); } }
   .sense { padding: var(--sp-s); border: 1px solid var(--line); background: var(--paper); }
-  .sense__label { display: block; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.66rem; color: var(--accent); margin-bottom: 16px; }
+  .sense__label { display: block; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.66rem; color: var(--ink); margin-bottom: 16px; }
   .sense p { color: var(--ink-2); font-weight: 300; max-width: 32ch; }
 
   /* process */
@@ -124,7 +124,7 @@
   }
   @media (min-width: 760px) { .step { grid-template-columns: 0.5fr 0.7fr 1.6fr; align-items: baseline; } }
   .step:hover { padding-left: var(--sp-xs); }
-  .step__no { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+  .step__no { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--ink); text-transform: uppercase; }
   .step__name { font-size: clamp(1.2rem,2vw,1.7rem); font-weight: 300; letter-spacing: -0.01em; }
   .step__desc { color: var(--ink-2); max-width: 50ch; }
   .process__foot { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 24px; }
@@ -136,9 +136,9 @@
     background: var(--ink); color: var(--paper);
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem;
     border: 1px solid var(--ink); padding: 16px 32px; cursor: pointer;
-    transition: background 0.4s var(--ease), color 0.4s var(--ease), gap 0.4s var(--ease);
+    transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), gap 0.4s var(--ease);
   }
-  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 24px; }
+  .btn:hover { background: var(--paper); border-color: var(--ink); color: var(--ink); gap: 24px; }
 </style>
 </head>
 <body>
@@ -165,7 +165,7 @@
         <img src="../images/dulguun-portret.jpg" alt="Portrait of Dulguun Otgonjav" loading="lazy" />
       </div>
       <div class="lead-portrait__caption reveal d1">
-        <p class="role">Founder &amp; Interior Architect</p>
+        <p class="role">Founder &amp; interior architect</p>
 
       </div>
     </div>

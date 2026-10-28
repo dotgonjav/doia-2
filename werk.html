@@ -57,7 +57,7 @@
         "item": {
           "@type": "CreativeWork",
           "name": "Ger",
-          "description": "Open leefruimte in een Antwerpse woning, met keuken, eettafel en zithoek rond één blok licht travertijn.",
+          "description": "Een Antwerpse woning in licht travertijn, gerookt eiken en kalkpleister, van leefruimte en keuken tot slaapkamer, badkamer en inkom.",
           "url": "https://doia.be/werk/ger",
           "image": "https://doia.be/images/ger-03.jpg",
           "creator": { "@id": "https://doia.be/#studio" }
@@ -71,7 +71,6 @@
           "name": "Shar",
           "description": "Atelier en verblijf binnen een ruw betonnen casco, met blauwe staalstructuur en gele mortex-kern.",
           "url": "https://doia.be/werk/shar",
-          "image": "https://doia.be/images/shar-02.jpg",
           "creator": { "@id": "https://doia.be/#studio" }
         }
       }
@@ -170,7 +169,7 @@
     transition: gap 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease);
   }
   .card__cta span { transition: transform 0.4s var(--ease); }
-  .card:hover .card__cta { gap: 16px; color: var(--accent); border-color: var(--accent); }
+  .card:hover .card__cta { gap: 16px; color: var(--ink); border-color: var(--ink); }
   .cta { padding-block: var(--sp-xl); border-top: 1px solid var(--line); text-align: center; }
   .cta h2 { font-weight: 300; letter-spacing: -0.02em; line-height: 1.08; font-size: clamp(2rem, 6vw, 4.6rem); max-width: 18ch; margin: 0 auto var(--sp-m); }
   .btn {
@@ -178,9 +177,12 @@
     background: var(--ink); color: var(--paper);
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem;
     border: 1px solid var(--ink); padding: 16px 32px; cursor: pointer;
-    transition: background 0.4s var(--ease), color 0.4s var(--ease), gap 0.4s var(--ease);
+    transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), gap 0.4s var(--ease);
   }
-  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 24px; }
+  .btn:hover { background: var(--paper); border-color: var(--ink); color: var(--ink); gap: 24px; }
+  .card--soon { cursor: default; }
+  .card__frame--soon { display: grid; place-items: center; color: var(--ink-3); }
+  .card__soon { display: inline-block; margin-top: 16px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.66rem; color: var(--ink-3); }
 </style>
 </head>
 <body>
@@ -218,18 +220,16 @@
         <img src="images/ger-06.jpg" alt="Ger, eettafel met zwarte spijlenstoelen en booglamp voor een groen schilderij" loading="lazy" />
       </div>
       <span class="card__title">Ger</span>
-      <p class="card__desc">Eén open leefruimte rond een keuken uit licht travertijn, met gerookt eiken, kalkpleister en linnen voor het raam.</p>
+      <p class="card__desc">Een woning in licht travertijn, gerookt eiken en kalkpleister, van keuken en leefruimte tot slaapkamer en badkamer.</p>
       <span class="card__cta">Bekijk project <span aria-hidden="true">&rarr;</span></span>
     </a>
 
-    <a href="/werk/shar" class="card reveal d2">
-      <div class="card__frame">
-        <img src="images/shar-02.jpg" alt="Shar, blauwe stalen wenteltrap" loading="lazy" />
-      </div>
+    <div class="card card--soon reveal d2">
+      <div class="card__frame card__frame--soon"><span class="mono">In voorbereiding</span></div>
       <span class="card__title">Shar</span>
       <p class="card__desc">Een nieuwe bewoning binnen een ruw betonnen casco, atelier onder en verblijf boven. Blauw draagt, geel woont.</p>
-      <span class="card__cta">Bekijk project <span aria-hidden="true">&rarr;</span></span>
-    </a>
+      <span class="card__soon">Binnenkort</span>
+    </div>
 
   </section>
 

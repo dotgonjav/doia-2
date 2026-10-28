@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ger — Residential Interior Concept | Studio DOIA</title>
-<meta name="description" content="An open living space in an Antwerp home: kitchen, dining and lounge arranged around one block of pale travertine." />
+<meta name="description" content="An Antwerp home in pale travertine, smoked oak and lime plaster, from living space and kitchen to bedroom, bathroom and entrance." />
 <link rel="canonical" href="https://doia.be/en/work/ger" />
 <link rel="alternate" hreflang="nl" href="https://doia.be/werk/ger" />
 <link rel="alternate" hreflang="en" href="https://doia.be/en/work/ger" />
@@ -12,13 +12,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Studio DOIA" />
 <meta property="og:title" content="Ger — Residential Interior Concept | Studio DOIA" />
-<meta property="og:description" content="An open living space in an Antwerp home: kitchen, dining and lounge arranged around one block of pale travertine." />
+<meta property="og:description" content="An Antwerp home in pale travertine, smoked oak and lime plaster, from living space and kitchen to bedroom, bathroom and entrance." />
 <meta property="og:url" content="https://doia.be/en/work/ger" />
 <meta property="og:image" content="https://doia.be/images/ger-01.jpg" />
 <meta property="og:locale" content="en_BE" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ger — Residential Interior Concept | Studio DOIA" />
-<meta name="twitter:description" content="An open living space in an Antwerp home: kitchen, dining and lounge arranged around one block of pale travertine." />
+<meta name="twitter:description" content="An Antwerp home in pale travertine, smoked oak and lime plaster, from living space and kitchen to bedroom, bathroom and entrance." />
 <meta name="twitter:image" content="https://doia.be/images/ger-01.jpg" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -30,7 +30,7 @@
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Ger",
-  "description": "Open living space in an Antwerp home, with kitchen, dining and lounge arranged around one block of pale travertine.",
+  "description": "An Antwerp home in pale travertine, smoked oak and lime plaster, from living space and kitchen to bedroom, bathroom and entrance.",
   "image": "https://doia.be/images/ger-01.jpg",
   "creator": {
     "@id": "https://doia.be/#studio"
@@ -102,16 +102,18 @@
   @media (max-width: 600px) { .proj-hero__scroll { display: none; } }
 
   /* specs */
-  .specs { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-block: var(--sp-m); }
+  .specs { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: var(--sp-m); }
   @media (min-width: 700px) { .specs { grid-template-columns: repeat(4,1fr); } }
   .specs div { background: var(--paper); padding: var(--sp-s); }
   .specs .k { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
   .specs .v { font-weight: 300; font-size: 1rem; }
 
   /* intro */
-  .proj-intro { display: grid; gap: var(--sp-m); padding-bottom: var(--sp-l); }
+  .proj-head { padding-top: var(--sp-xl); }
+  .proj-intro { display: grid; gap: var(--sp-m); }
   @media (min-width: 860px) { .proj-intro { grid-template-columns: 1fr 1fr; align-items: start; } }
   .proj-intro p { color: var(--ink-2); max-width: 54ch; }
+  .proj-intro p + p { margin-top: 1.25em; }
   .proj-intro .pull { color: var(--ink); font-weight: 400; }
 
   /* gallery */
@@ -137,13 +139,14 @@
     background: var(--ink); color: var(--paper);
     font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem;
     border: 1px solid var(--ink); padding: 16px 32px; cursor: pointer;
-    transition: background 0.4s var(--ease), color 0.4s var(--ease), gap 0.4s var(--ease);
+    transition: background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease), gap 0.4s var(--ease);
   }
-  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; gap: 24px; }
+  .btn:hover { background: var(--paper); border-color: var(--ink); color: var(--ink); gap: 24px; }
   .proj-nav {
     display: grid; grid-template-columns: 1fr auto 1fr;
     align-items: center; gap: 16px;
-    padding-block: var(--sp-m);
+    padding-block: var(--sp-xl);
+    border-top: 1px solid var(--line);
   }
   .proj-nav__link {
     display: flex; flex-direction: column; gap: 8px;
@@ -151,6 +154,8 @@
     color: var(--ink-3); transition: color 0.35s var(--ease); text-decoration: none;
   }
   .proj-nav__link:hover { color: var(--ink); }
+  .proj-nav__link .title { transition: color 0.35s var(--ease); }
+  .proj-nav__link:hover .title { color: var(--ink-2); }
   .proj-nav__link .title { font-family: var(--sans); font-size: clamp(1rem,1.6vw,1.3rem); font-weight: 300; letter-spacing: -0.01em; text-transform: none; color: var(--ink); }
   .proj-nav__link.next { text-align: right; }
   .proj-nav__back { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); text-align: center; transition: color 0.35s var(--ease); text-decoration: none; }
@@ -181,7 +186,7 @@
 </header>
 
 <main>
-  <section class="shell">
+  <section class="shell proj-head">
     <div class="specs reveal">
       <div><div class="k">Type</div><div class="v">Residential</div></div>
       <div><div class="k">Location</div><div class="v">Antwerp</div></div>
@@ -192,12 +197,12 @@
     <div class="proj-intro">
       <div class="reveal">
         <p class="eyebrow u-mb-16">About the project</p>
-        <p>A family wanted to cook, eat and spend time together in one room, without that one room becoming restless. The answer lay in the ger itself: the nomadic tent with a single room, where everything happens around a fixed centre. <span class="pull">Here that centre is a kitchen made from one block of pale travertine, with dining table and lounge arranged around it along the windows.</span></p>
       </div>
       <div class="reveal d1">
-        <p>The kitchen stands as a freestanding volume within the space. Tall cabinets in dark smoked oak form the back wall; in front of them stands the island, fully clad in travertine, with a sink cut from the same stone. Storage and services disappear behind the cabinet wall, so the living space itself stays empty and calm.</p>
-        <p>Floor-to-ceiling windows run along the facade, behind linen curtains that soften the light. Dining table and lounge each sit on their own wool rug, as two places on one continuous oak floor. Every moment of the day gets a fixed place, without a single dividing wall.</p>
-      </div>
+        <p>A family wanted a home in which every room feels equally calm, from the entrance to the bathroom. The starting point lay in the ger itself: the nomadic tent where everything happens around a fixed centre. Here that centre is the living space, with kitchen, dining and lounge along the windows. The other rooms speak the same language.</p>
+      <p>The kitchen stands as a freestanding island in pale travertine in front of a wall of tall cabinets in dark smoked oak. Storage and appliances disappear behind that cabinet wall. Dining and lounge each sit on their own wool rug, on one continuous oak floor, behind linen curtains that soften the light.</p>
+      <p>The same materials run through the whole home. The entrance holds a bench in dark oak and a black and white artwork. The bedroom has a display cabinet in dark oak, the bathroom a travertine vanity beneath a skylight.</p>
+    </div>
     </div>
   </section>
 
@@ -228,7 +233,7 @@
   <section class="shell note">
     <div class="reveal"><p class="eyebrow">About the materials</p></div>
     <div class="reveal d1">
-      <p>Walls and ceiling are finished in lime plaster, light and matte, with a clouded texture that spreads the daylight softly. The floor is wide oak plank in a warm grey-brown tone and runs without interruption from kitchen to lounge.</p>
+      <p>Walls and ceilings are finished in lime plaster, light and matte, with a clouded texture that spreads the daylight softly. The floor is in wide oak planks, in a warm grey-brown tone, and runs without interruption through the home.</p>
       <p>The travertine is pale and vein-cut, so its natural veins run as fine horizontal lines across island, worktop and splashback. Against it stands the smoked oak of the tall cabinets: a calm, almost black plane that anchors the kitchen. A curved tap in brushed steel is the only metal on the island.</p>
       <p>The furniture speaks the same language: a coffee table in solid dark timber, built up like stacked beams, black spindle chairs around a long dark table, benches and armchairs in teak with cane seats, a stool cut from a single piece of raw wood. Ceramics, old terracotta jars and art in deep blue and moss green bring colour without overpowering the whole.</p>
     </div>
