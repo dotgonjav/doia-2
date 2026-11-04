@@ -19,7 +19,7 @@
   };
   var H, S = EN ? [
     { id: 'dienst', label: 'Service', req: true, q: 'How can I help you?', opts: [
-      { v: 'Spatial advice', s: 'Home visit with advice on site', k: 'advies' },
+      { v: 'Spatial advice', s: 'Free site visit with advice on site', k: 'advies' },
       { v: 'Design', s: 'Complete concept, plans and 3D', k: 'ontwerp' },
       { v: 'Design with guidance', s: 'Design, bill of quantities, tender and site', k: 'begeleiding' },
       { v: 'Not sure yet', s: 'To be explored together' }] },
@@ -35,7 +35,7 @@
     { id: 'contact', type: 'contact', req: true, q: 'How can I reach you?' }
   ] : [
     { id: 'dienst', label: 'Dienst', req: true, q: 'Waarmee kan ik u helpen?', opts: [
-      { v: 'Ruimtelijk advies', s: 'Huisbezoek met advies ter plaatse', k: 'advies' },
+      { v: 'Ruimtelijk advies', s: 'Gratis plaatsbezoek met advies ter plaatse', k: 'advies' },
       { v: 'Ontwerp', s: 'Volledig concept, plannen en 3D', k: 'ontwerp' },
       { v: 'Ontwerp met begeleiding', s: 'Ontwerp, meetstaat, aanbesteding en werf', k: 'begeleiding' },
       { v: 'Weet ik nog niet', s: 'Samen bekijken wat past' }] },
