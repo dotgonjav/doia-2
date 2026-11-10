@@ -127,4 +127,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://doia.be/blog</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doia.be/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://doia.be/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doia.be/blog" />
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://doia.be/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doia.be/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://doia.be/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doia.be/blog" />
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://doia.be/blog/waar-beginnen</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doia.be/blog/waar-beginnen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://doia.be/en/blog/waar-beginnen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doia.be/blog/waar-beginnen" />
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://doia.be/en/blog/waar-beginnen</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://doia.be/blog/waar-beginnen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://doia.be/en/blog/waar-beginnen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://doia.be/blog/waar-beginnen" />
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
