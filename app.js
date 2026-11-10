@@ -31,7 +31,7 @@
       return s || 'index';
     }
     var current = key(location.pathname);
-    document.querySelectorAll('.nav__menu a').forEach(function (a) {
+    document.querySelectorAll('.nav__menu > a').forEach(function (a) {
       if (key(a.getAttribute('href')) === current) a.setAttribute('aria-current', 'page');
     });
   }

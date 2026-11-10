@@ -42,7 +42,6 @@
     g.innerHTML =
       '<div class="lgate__inner">' +
                 '<div class="lgate__mark" id="lgate-mark" aria-label="Studio DOIA">' + letters('Studio DOIA') + '</div>' +
-        '<p class="lgate__ask">Kies uw taal <span aria-hidden="true">/</span> Choose your language</p>' +
         '<div class="lgate__choices">' +
           '<button type="button" class="lgate__opt" data-l="nl" lang="nl"><span class="lgate__name">Nederlands</span></button>' +
           '<button type="button" class="lgate__opt" data-l="en" lang="en"><span class="lgate__name">English</span></button>' +
