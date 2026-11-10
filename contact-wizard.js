@@ -25,10 +25,10 @@
       { v: 'Not sure yet', s: 'To be explored together' }] },
     { id: 'type', req: true, label: 'Type of property', q: 'What type of property is it?', opts: ['House', 'Apartment', 'Shop', 'Office', 'Hospitality', 'Other'] },
     { id: 'ruimtes', req: true, label: 'Rooms', multi: true, q: 'Which rooms would you like to work on?', ph: 'E.g. practice room, studio, waiting room', byType: [H = ['Kitchen', 'Living room', 'Dining room', 'Bathroom', 'Bedroom', 'Study', 'Entrance and hall', 'Entire home'], H, ['Sales floor', 'Shop window', 'Counter and checkout', 'Fitting rooms', 'Storage', 'Staff room', 'Entire shop'], ['Workspaces', 'Meeting room', 'Reception', 'Executive office', 'Pantry', 'Restrooms', 'Entire office'], ['Dining room', 'Bar', 'Lounge', 'Terrace', 'Kitchen', 'Restrooms', 'Hotel rooms', 'Entire venue'], null] },
-    { id: 'aard', req: true, label: 'New build / renovation', q: 'Is it a new build or a renovation?', opts: ['New build / shell', 'Renovation', 'Refurnishing without major works'] },
-    { id: 'opp', req: true, label: 'Floor area', q: 'Roughly how large is the space or property?', opts: ['Under 50 m²', '50 – 100 m²', '100 – 200 m²', 'Over 200 m²', 'Not sure'] },
-    { id: 'timing', req: true, label: 'Timing', q: 'When would you like to start?', opts: ['As soon as possible', 'Within 3 months', 'In 3 to 6 months', 'Later than 6 months', 'No idea yet'] },
-    { id: 'budget', req: true, label: 'Budget', q: 'What budget do you roughly have in mind?', hint: 'Indicative building cost, excluding fees', opts: ['Under € 50,000', '€ 50,000 – 150,000', '€ 150,000 – 300,000', 'Over € 300,000', 'No idea yet'] },
+    { id: 'aard', noAdv: true, req: true, label: 'New build / renovation', q: 'Is it a new build or a renovation?', opts: ['New build / shell', 'Renovation', 'Refurnishing without major works'] },
+    { id: 'opp', noAdv: true, req: true, label: 'Floor area', q: 'Roughly how large is the space or property?', opts: ['Under 50 m²', '50 – 100 m²', '100 – 200 m²', '200 – 500 m²', '500 – 1000 m²', 'Over 1000 m²'] },
+    { id: 'timing', noAdv: true, req: true, label: 'Timing', q: 'When would you like to start?', opts: ['As soon as possible', 'Within 3 months', 'In 3 to 6 months', 'Later than 6 months'] },
+    { id: 'budget', req: true, label: 'Budget', q: 'What budget do you roughly have in mind?', hint: 'Indicative building cost, excluding fees', opts: ['€ 25,000 – 75,000', '€ 75,000 – 150,000', '€ 150,000 – 300,000', 'Over € 300,000'] },
     { id: 'locatie', req: true, label: 'Location', type: 'postcode', q: 'Where is the project located?', ph: 'Postcode' },
     { id: 'bron', label: 'Source', q: 'How did you hear about Studio DOIA?', opts: ['Google', 'Google Maps', 'Instagram', 'LinkedIn', 'Word of mouth', 'Other'] },
     { id: 'bericht', label: 'Message', type: 'area', q: 'Anything else you would like to share?', ph: 'About your space, your wishes or what bothers you now.' },
@@ -41,10 +41,10 @@
       { v: 'Weet ik nog niet', s: 'Samen bekijken wat past' }] },
     { id: 'type', req: true, label: 'Type pand', q: 'Om wat voor pand gaat het?', opts: ['Huis', 'Appartement', 'Handelszaak', 'Kantoor', 'Horeca', 'Ander'] },
     { id: 'ruimtes', req: true, label: 'Ruimtes', multi: true, q: 'Welke ruimtes wilt u aanpakken?', ph: 'Bv. praktijkruimte, atelier, wachtzaal', byType: [H = ['Keuken', 'Living', 'Eetkamer', 'Badkamer', 'Slaapkamer', 'Bureau', 'Inkom en hal', 'Volledige woning'], H, ['Verkoopruimte', 'Etalage', 'Toonbank en kassa', 'Paskamers', 'Stockruimte', 'Personeelsruimte', 'Volledige zaak'], ['Werkplekken', 'Vergaderruimte', 'Onthaal', 'Directiekantoor', 'Pantry', 'Sanitair', 'Volledig kantoor'], ['Eetzaal', 'Bar', 'Lounge', 'Terras', 'Keuken', 'Sanitair', 'Hotelkamers', 'Volledige zaak'], null] },
-    { id: 'aard', req: true, label: 'Nieuwbouw / renovatie', q: 'Gaat het om nieuwbouw of renovatie?', opts: ['Nieuwbouw / casco', 'Renovatie', 'Herinrichting zonder grote werken'] },
-    { id: 'opp', req: true, label: 'Oppervlakte', q: 'Hoe groot is de ruimte of het pand ongeveer?', opts: ['Minder dan 50 m²', '50 – 100 m²', '100 – 200 m²', 'Meer dan 200 m²', 'Weet ik niet'] },
-    { id: 'timing', req: true, label: 'Timing', q: 'Wanneer wilt u starten?', opts: ['Zo snel mogelijk', 'Binnen 3 maanden', 'Over 3 tot 6 maanden', 'Later dan 6 maanden', 'Nog geen idee'] },
-    { id: 'budget', req: true, label: 'Budget', q: 'Welk budget heeft u ongeveer voor ogen?', hint: 'Indicatieve bouwkost, exclusief erelonen', opts: ['Minder dan 50.000 €', '50.000 – 150.000 €', '150.000 – 300.000 €', 'Meer dan 300.000 €', 'Nog geen idee'] },
+    { id: 'aard', noAdv: true, req: true, label: 'Nieuwbouw / renovatie', q: 'Gaat het om nieuwbouw of renovatie?', opts: ['Nieuwbouw / casco', 'Renovatie', 'Herinrichting zonder grote werken'] },
+    { id: 'opp', noAdv: true, req: true, label: 'Oppervlakte', q: 'Hoe groot is de ruimte of het pand ongeveer?', opts: ['Minder dan 50 m²', '50 – 100 m²', '100 – 200 m²', '200 – 500 m²', '500 – 1000 m²', 'Meer dan 1000 m²'] },
+    { id: 'timing', noAdv: true, req: true, label: 'Timing', q: 'Wanneer wilt u starten?', opts: ['Zo snel mogelijk', 'Binnen 3 maanden', 'Over 3 tot 6 maanden', 'Later dan 6 maanden'] },
+    { id: 'budget', req: true, label: 'Budget', q: 'Welk budget heeft u ongeveer voor ogen?', hint: 'Indicatieve bouwkost, exclusief erelonen', opts: ['25.000 – 75.000 €', '75.000 – 150.000 €', '150.000 – 300.000 €', 'Meer dan 300.000 €'] },
     { id: 'locatie', req: true, label: 'Locatie', type: 'postcode', q: 'Waar bevindt het project zich?', ph: 'Postcode' },
     { id: 'bron', label: 'Bron', q: 'Hoe heeft u Studio DOIA leren kennen?', opts: ['Google', 'Google Maps', 'Instagram', 'LinkedIn', 'Via via', 'Ander'] },
     { id: 'bericht', label: 'Bericht', type: 'area', q: 'Wilt u nog iets vertellen?', ph: 'Over uw ruimte, uw wensen of wat u nu stoort.' },
@@ -135,6 +135,9 @@
   }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function has(s) { var v = st[s.id]; return Array.isArray(v) ? v.length > 0 : !!(v && String(v).trim()); }
+  function isOther(v) { return v === 'Ander' || v === 'Other'; }
+  function otherOn(s) { return !s.multi && isOther(st[s.id]); }
+  function hid(s) { return s.noAdv && st.dienst === S[0].opts[0].v; }
   function pressed(s, v) { var x = st[s.id]; return s.multi ? !!(x && x.indexOf(v) > -1) : x === v; }
   function field(id, type, label, ph, req, err) {
     return '<div class="field" id="f-' + id + '"><label for="' + id + '">' + label + (req ? ' <span class="req">*</span>' : '') + '</label>' +
@@ -150,7 +153,7 @@
     if (s.opts) {
       h += '<div class="wiz__opts" role="group">' + s.opts.map(function (o, n) {
         return '<button type="button" class="opt" data-n="' + n + '" aria-pressed="' + pressed(s, o.v) + '"><span class="opt__box' + (s.multi ? ' opt__box--multi' : '') + '"></span><span class="opt__txt"><span class="opt__v">' + o.v + '</span>' + (o.s ? '<span class="opt__s">' + o.s + '</span>' : '') + '</span></button>';
-      }).join('') + '</div><p class="wiz__err" id="wiz-err" hidden>' + T.need + '</p>';
+      }).join('') + '</div>' + (!s.multi && s.opts.some(function (o) { return isOther(o.v); }) ? '<div class="field" id="w-other-f" style="display:' + (otherOn(s) ? '' : 'none') + '"><input type="text" id="w-other" placeholder="' + (EN ? 'Please specify' : 'Vul zelf in') + '" value="' + esc(st[s.id + 'X'] || '') + '" /></div>' : '') + '<p class="wiz__err" id="wiz-err" hidden>' + T.need + '</p>';
     } else if (s.type === 'text') {
       h += '<div class="field"><input type="text" id="w-in" placeholder="' + s.ph + '" value="' + esc(st[s.id] || '') + '" /></div><p class="wiz__err" id="wiz-err" hidden>' + T.fill + '</p>';
     } else if (s.type === 'postcode') {
@@ -173,8 +176,9 @@
     stage.innerHTML = h;
     if (s.type === 'postcode' && !st.land) pcShow();
     stage.style.animation = 'none'; void stage.offsetWidth; stage.style.animation = '';
-    count.textContent = String(i + 1).padStart(2, '0') + ' / ' + N;
-    bar.style.width = ((i + 1) / N * 100) + '%';
+    var V = S.filter(function (x) { return !hid(x); }), p = V.indexOf(s) + 1;
+    count.textContent = String(p).padStart(2, '0') + ' / ' + V.length;
+    bar.style.width = (p / V.length * 100) + '%';
     bBack.style.visibility = i ? 'visible' : 'hidden';
     bSkip.hidden = !!s.req;
     bNext.textContent = s.type === 'contact' ? T.send : T.next;
@@ -187,12 +191,13 @@
     }
   }
 
-  function go(d) { clearTimeout(timer); i = Math.max(0, Math.min(N - 1, i + d)); render(true); }
+  function go(d) { clearTimeout(timer); var j = i + d; while (j > 0 && j < N - 1 && hid(S[j])) j += d; i = Math.max(0, Math.min(N - 1, j)); render(true); }
   function next() {
     var s = S[i];
     if (s.type === 'contact') return submit();
     if (s.type === 'postcode' && !st.land && st.pc && !prov(+st.pc)) { document.getElementById('wiz-err').hidden = false; return; }
     if (s.req && !has(s)) { var e = document.getElementById('wiz-err'); if (e) e.hidden = false; return; }
+    if (otherOn(s) && !(st[s.id + 'X'] || '').trim()) { var e2 = document.getElementById('wiz-err'); e2.textContent = T.fill; e2.hidden = false; return; }
     go(1);
   }
 
@@ -216,7 +221,11 @@
       if (s.id === 'type' && st.type !== v) delete st.ruimtes;
       st[s.id] = v;
       stage.querySelectorAll('.opt').forEach(function (o) { o.setAttribute('aria-pressed', o === b); });
-      clearTimeout(timer); timer = setTimeout(function () { go(1); }, 320);
+      var of = document.getElementById('w-other-f');
+      if (of) of.style.display = isOther(v) ? '' : 'none';
+      clearTimeout(timer);
+      if (isOther(v)) document.getElementById('w-other').focus({ preventScroll: true });
+      else timer = setTimeout(function () { go(1); }, 320);
     }
     var er = document.getElementById('wiz-err'); if (er) er.hidden = true;
   });
@@ -230,7 +239,8 @@
       st[t.id === 'w-intl' ? 'intl' : 'ctry'] = t.value; intlSet(); var er1 = document.getElementById('wiz-err'); if (er1) er1.hidden = true;
     } else if (t.id === 'w-gem') {
       st.pcGem = t.value.trim(); pcSet(); document.getElementById('pc-out').textContent = st.pcOut;
-    } else if (t.id === 'w-in') { st[s.id] = t.value; var er2 = document.getElementById('wiz-err'); if (er2) er2.hidden = true; }
+    } else if (t.id === 'w-other') { st[s.id + 'X'] = t.value; var er3 = document.getElementById('wiz-err'); if (er3) er3.hidden = true; }
+    else if (t.id === 'w-in') { st[s.id] = t.value; var er2 = document.getElementById('wiz-err'); if (er2) er2.hidden = true; }
     else if (t.id in st) st[t.id] = t.type === 'checkbox' ? t.checked : t.value;
     var f = t.closest('.field') || t.closest('.consent'); if (f) f.classList.remove('invalid');
   });
@@ -255,8 +265,9 @@
     fd.set('subject', T.subject + ' · ' + (st.dienst || '—'));
     var rows = [];
     S.forEach(function (s) {
-      if (s.type === 'contact' || !has(s)) return;
+      if (s.type === 'contact' || hid(s) || !has(s)) return;
       var v = Array.isArray(st[s.id]) ? st[s.id].join(', ') : String(st[s.id]).trim();
+      if (otherOn(s) && (st[s.id + 'X'] || '').trim()) v = v + ': ' + st[s.id + 'X'].trim();
       fd.append(s.label, v); rows.push([s.label, v]);
     });
     bNext.disabled = true; bNext.textContent = T.sending;
